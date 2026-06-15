@@ -1,0 +1,67 @@
+{
+ "n_tasks": 34050,
+ "split": "by-model (no leakage)",
+ "n_train": 25847,
+ "n_test": 8203,
+ "test_accuracy": 0.6026,
+ "majority_baseline": 0.4453,
+ "lift": 0.1573,
+ "classes_present": [
+  "plane",
+  "cylinder",
+  "cone",
+  "sphere",
+  "torus",
+  "freeform"
+ ],
+ "confusion_matrix": [
+  [
+   3311,
+   247,
+   14,
+   0,
+   26,
+   55
+  ],
+  [
+   1006,
+   1390,
+   47,
+   25,
+   59,
+   119
+  ],
+  [
+   74,
+   121,
+   48,
+   1,
+   18,
+   18
+  ],
+  [
+   25,
+   79,
+   0,
+   7,
+   2,
+   14
+  ],
+  [
+   223,
+   362,
+   33,
+   9,
+   106,
+   112
+  ],
+  [
+   124,
+   342,
+   20,
+   17,
+   68,
+   81
+  ]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "n_tasks": 34050,
+ "n_points_each": 128,
+ "classes": [
+  "plane",
+  "cylinder",
+  "cone",
+  "sphere",
+  "torus",
+  "freeform"
+ ],
+ "class_distribution": {
+  "plane": 16202,
+  "cylinder": 9918,
+  "cone": 1715,
+  "sphere": 547,
+  "torus": 2394,
+  "freeform": 3274
+ },
+ "by_difficulty": {
+  "complex": 32133,
+  "simple": 1917
+ },
+ "split_by_model": {
+  "train": 25847,
+  "test": 8203
+ },
+ "points_shape": [
+  34050,
+  128,
+  3
+ ]
+}

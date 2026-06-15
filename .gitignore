@@ -1,0 +1,9 @@
+# the full dataset is regenerable by running the pipeline (see README §4) — keep it out of git
+*.npy
+data/
+abc_data/
+extract_out/
+l1_dataset/
+__pycache__/
+*.pyc
+.DS_Store

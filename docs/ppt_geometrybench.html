@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>GeometryBench 方案设计</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+:root{
+  --bg:#fff;--bg2:#f6f8fa;--title:#14142b;--body:#4e4b66;--muted:#a0a3bd;
+  --g:#22916a;--g2:#d4f5e5;--g3:#f0faf5;
+  --o:#d97706;--o2:#fef0cd;--o3:#fffbf0;
+  --b:#2563eb;--b2:#dbeafe;--b3:#f0f4ff;
+  --p:#7c3aed;--p2:#ede9fe;--p3:#f7f4ff;
+  --r:#dc2626;--r2:#fde8e8;--r3:#fff5f5;
+  --card:#f8f9fb;--card-b:#e5e7eb;
+  --th:#14142b;--th-f:#fff;--alt:#f8f9fb;
+  --radius:10px;--shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --shadow-lg:0 4px 12px rgba(0,0,0,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Microsoft YaHei',system-ui,sans-serif;background:#e5e7eb;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:16px}
+.s{
+  width:1200px;height:675px;background:var(--bg);margin:20px auto;position:relative;overflow:hidden;
+  border-radius:6px;box-shadow:var(--shadow-lg);page-break-after:always;
+}
+.s-dark{background:var(--title)}
+.hdr{position:absolute;top:28px;left:48px;right:48px}
+.hdr h2{font-size:22px;font-weight:700;color:var(--title);letter-spacing:-.3px}
+.hdr-line{width:48px;height:3px;border-radius:2px;margin-top:6px}
+.hdr-sub{font-size:11.5px;color:var(--muted);margin-top:5px;font-weight:400}
+.pn{position:absolute;bottom:14px;right:28px;font-size:10px;color:var(--muted);font-weight:500}
+.dot{position:absolute;top:30px;right:48px;width:12px;height:12px;border-radius:50%}
+.txt{font-size:13px;color:var(--body);line-height:1.72}
+.txt b,.txt strong{color:var(--title);font-weight:600}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:10px;font-weight:600}
+.card{
+  background:var(--card);border:1px solid var(--card-b);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  font-size:11px;color:var(--muted);text-align:center;padding:12px;
+  box-shadow:var(--shadow);
+}
+table{border-collapse:separate;border-spacing:0;font-size:11.5px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+th{background:var(--th);color:var(--th-f);padding:8px 11px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.3px;text-transform:uppercase}
+td{padding:7px 11px;color:var(--body);border-bottom:1px solid #f0f0f0}
+tr:nth-child(even) td{background:var(--alt)}
+tr:last-child td{border-bottom:none}
+.box{border-radius:var(--radius);padding:14px 18px;font-size:12.5px;line-height:1.65}
+.cols{display:flex;gap:20px}
+.col{flex:1}
+ul.bl{padding-left:18px;margin:4px 0}
+ul.bl li{margin-bottom:3px}
+.lvl{display:flex;align-items:center;justify-content:space-between;border-radius:8px;color:#fff;padding:0 18px;font-weight:600;box-shadow:var(--shadow)}
+@media print{
+  body{background:#fff}
+  .wrap{padding:0}
+  .s{box-shadow:none;margin:0;page-break-inside:avoid;border:1px solid #ddd}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════ P1 封面 ═══════════════════════ -->
+<div class="s s-dark" style="display:flex;align-items:center">
+  <div style="position:absolute;left:0;top:0;bottom:0;width:18px;background:var(--p)"></div>
+  <div style="position:absolute;left:18px;top:0;bottom:0;width:7px;background:var(--g)"></div>
+  <div style="position:absolute;left:25px;top:0;bottom:0;width:4px;background:var(--o)"></div>
+  <div style="position:absolute;right:0;bottom:0;width:400px;height:400px;border-radius:50%;background:rgba(124,58,237,.08)"></div>
+  <div style="position:absolute;right:120px;bottom:-60px;width:260px;height:260px;border-radius:50%;background:rgba(37,99,235,.05)"></div>
+  <div style="padding-left:72px;z-index:1">
+    <div style="font-size:13px;color:rgba(255,255,255,.35);font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px">Benchmark Proposal</div>
+    <h1 style="font-size:42px;color:#fff;font-weight:700;letter-spacing:-.5px">GeometryBench</h1>
+    <p style="font-size:17px;color:rgba(255,255,255,.55);margin-top:8px;font-weight:300">A Benchmark for Geometry Understanding, Reasoning and Generation</p>
+    <p style="font-size:14px;color:rgba(255,255,255,.4);margin-top:4px;font-weight:300">几何智能五级评价体系 · 方案设计</p>
+    <div style="margin-top:36px;display:flex;gap:8px;align-items:center">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(255,255,255,.6)">刘</div>
+      <div>
+        <div style="font-size:14px;color:rgba(255,255,255,.8);font-weight:500">刘思汛</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.35)">2026.06</div>
+      </div>
+    </div>
+    <div style="margin-top:44px;display:flex;gap:16px;font-size:11px;color:rgba(255,255,255,.35);align-items:center">
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:var(--g)"></span>L1 识别</span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:var(--p)"></span>L2 拓扑</span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:var(--b)"></span>L3 推理</span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:var(--o)"></span>L4 生成</span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:50%;background:var(--r)"></span>L5 工程发现</span>
+    </div>
+  </div>
+  <div class="pn" style="color:rgba(255,255,255,.25)">1/9</div>
+</div>
+
+<!-- ═══════════════════════ P2 动机与空白 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>动机：现有评测的两个问题，一个空白</h2><div class="hdr-line" style="background:var(--p)"></div><div class="hdr-sub">出发点来自上一轮 Point Cloud to BRep 调研的直接观察</div></div>
+  <div class="dot" style="background:var(--p)"></div>
+  <div style="position:absolute;top:84px;left:48px;width:340px">
+    <div class="box" style="background:var(--r3);border:1.5px solid var(--r);margin-bottom:14px">
+      <div style="font-weight:700;color:var(--r);font-size:13px;margin-bottom:6px">问题一：碎片化</div>
+      <div class="txt" style="font-size:12px">识别有 ShapeNet/ABC，推理有 SGP-Bench，生成有 CADBench——<b>各管一段，没有体系</b>；模型失败时说不清哪一层能力断了</div>
+    </div>
+    <div class="box" style="background:var(--o3);border:1.5px solid var(--o);margin-bottom:14px">
+      <div style="font-weight:700;color:var(--o);font-size:13px;margin-bottom:6px">问题二：指标不统一 <span class="badge" style="background:var(--o2);color:var(--o)">Phase 1 发现</span></div>
+      <div class="txt" style="font-size:12px">重建类用 Chamfer/F-score，生成类用 validity/novelty，序列类用命令准确率——<b>17 个方法无法横向比较</b></div>
+    </div>
+    <div class="box" style="background:var(--p3);border:1.5px solid var(--p)">
+      <div style="font-weight:700;color:var(--p);font-size:13px;margin-bottom:6px">空白：拓扑理解</div>
+      <div class="txt" style="font-size:12px">没有任何 benchmark 考"面 A 与面 B 是否共享边""这个 B-Rep 为什么非法"——<b>恰是几何像→拓扑合法发生质变的层级</b></div>
+    </div>
+  </div>
+  <div style="position:absolute;top:84px;left:412px;right:48px">
+    <table style="width:100%">
+      <tr><th>现有 Benchmark</th><th style="text-align:center">L1<br>识别</th><th style="text-align:center">L2<br>拓扑</th><th style="text-align:center">L3<br>推理</th><th style="text-align:center">L4<br>生成</th><th style="text-align:center">L5<br>发现</th></tr>
+      <tr><td>ShapeNet / PartNet / MFCAD++</td><td style="text-align:center;color:var(--g)">●</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>ABC（SPFN / ParSeNet 系）</td><td style="text-align:center;color:var(--g)">●</td><td style="text-align:center;color:var(--muted)">◐</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>SGP-Bench / GeoGramBench</td><td style="text-align:center;color:var(--muted)">◐</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:var(--g)">●</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>Geometry3K / 空间智能系（VSI…）</td><td style="text-align:center;color:var(--muted)">◐</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:var(--muted)">◐</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>CADBench / Text2CAD-Bench</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:var(--g)">●</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>各生成论文自带评测</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:var(--muted)">◐</td><td style="text-align:center;color:#ddd">○</td></tr>
+      <tr><td>EngiAI / ERI（工程 agent 系）</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:#ddd">○</td><td style="text-align:center;color:var(--muted)">◐</td></tr>
+      <tr><td style="font-weight:700;color:var(--p)">GeometryBench（本方案）</td><td style="text-align:center;color:var(--p);font-weight:700">●</td><td style="text-align:center;color:var(--p);font-weight:700">●</td><td style="text-align:center;color:var(--p);font-weight:700">●</td><td style="text-align:center;color:var(--p);font-weight:700">●</td><td style="text-align:center;color:var(--p);font-weight:700">●</td></tr>
+    </table>
+    <div style="font-size:10px;color:var(--muted);margin-top:6px">● 覆盖　◐ 部分覆盖（场景级 / 指标不一 / 非几何接地）　○ 不覆盖</div>
+  </div>
+  <div style="position:absolute;bottom:20px;left:48px;right:48px;text-align:center">
+    <div style="display:inline-block;background:var(--title);color:#fff;padding:8px 28px;border-radius:20px;font-size:13px;font-weight:600">L2 拓扑一列几乎全空 —— 既是最大空白，也是离 CAD kernel 研究最近的层级</div>
+  </div>
+  <div class="pn">2/9</div>
+</div>
+
+<!-- ═══════════════════════ P3 总体设计 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>总体设计：能力金字塔 × 三个核心机制</h2><div class="hdr-line" style="background:var(--p)"></div><div class="hdr-sub">分级不是分类，低层是高层的前提 —— 可以诊断模型在哪一层断了</div></div>
+  <div class="dot" style="background:var(--p)"></div>
+  <!-- 左：金字塔 -->
+  <div style="position:absolute;top:96px;left:48px;width:480px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div class="lvl" style="width:200px;height:58px;background:var(--r)"><span>L5 工程发现</span><span style="font-size:10px;font-weight:400;opacity:.85">开放 · agent</span></div>
+      <div class="lvl" style="width:270px;height:58px;background:var(--o)"><span>L4 生成</span><span style="font-size:10px;font-weight:400;opacity:.85">造出合法几何</span></div>
+      <div class="lvl" style="width:340px;height:58px;background:var(--b)"><span>L3 推理</span><span style="font-size:10px;font-weight:400;opacity:.85">为什么 / 如果</span></div>
+      <div class="lvl" style="width:410px;height:58px;background:var(--p);border:2px solid var(--title)"><span>L2 拓扑 ⭐</span><span style="font-size:10px;font-weight:400;opacity:.85">结构怎么连 · 何为合法</span></div>
+      <div class="lvl" style="width:480px;height:58px;background:var(--g)"><span>L1 识别</span><span style="font-size:10px;font-weight:400;opacity:.85">看得出这是什么</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-top:10px;padding:0 6px">
+      <span style="font-size:10px;color:var(--muted)">↑ 越往上越开放，需要专家/仿真</span>
+      <span style="font-size:10px;color:var(--muted)">↓ 越往下越封闭，kernel 全自动判分</span>
+    </div>
+  </div>
+  <!-- 右：三机制 -->
+  <div style="position:absolute;top:96px;left:564px;right:48px;display:flex;flex-direction:column;gap:13px">
+    <div class="box" style="background:var(--p3);border:1.5px solid var(--p)">
+      <div style="font-weight:700;color:var(--p);font-size:13px;margin-bottom:4px">① Kernel-as-Oracle：kernel 既出题又判卷</div>
+      <div class="txt" style="font-size:11.5px">拓扑计数、邻接图、布尔结果、合法性诊断都可由 kernel <b>精确计算</b> → 题目零人工、无限再生、定期换题防数据污染。Phase 1 的观察"求交是共同主线"在此升级为方法论</div>
+    </div>
+    <div class="box" style="background:var(--b3);border:1.5px solid var(--b)">
+      <div style="font-weight:700;color:var(--b);font-size:13px;margin-bottom:4px">② 同源多模态：一题多问，考表示不变性</div>
+      <div class="txt" style="font-size:11.5px">一个 B-Rep 种子 → STEP / CAD 序列 / mesh / 点云 / 渲染图 / 文本六种表示，同一道题跨表示各问一遍：LLM、VLM、3D 专用模型<b>同台同分制</b>，跨表示一致性本身是指标</div>
+    </div>
+    <div class="box" style="background:var(--g3);border:1.5px solid var(--g)">
+      <div style="font-weight:700;color:var(--g);font-size:13px;margin-bottom:4px">③ 分级递进：雷达图 + 等级认证</div>
+      <div class="txt" style="font-size:11.5px">每级 0–100 分 → 五维雷达图；认证 Level k 要求 L1…Lk <b>全部 ≥ 60</b>（类比自动驾驶分级）——防止"会生成但不懂拓扑"的模型拿高等级</div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:20px;left:48px;right:48px;text-align:center">
+    <div style="display:inline-block;background:var(--title);color:#fff;padding:8px 28px;border-radius:20px;font-size:13px;font-weight:600">核心理念：用确定性的几何引擎，度量不确定的学习模型</div>
+  </div>
+  <div class="pn">3/9</div>
+</div>
+
+<!-- ═══════════════════════ P4 L1+L2 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>L1 识别 · L2 拓扑（本方案最有原创性的层级）</h2><div class="hdr-line" style="background:linear-gradient(90deg,var(--g),var(--p))"></div><div class="hdr-sub">L1 做统一化整合；L2 填补空白 —— "几何像 ≠ 拓扑合法"的质变发生在这里</div></div>
+  <div class="dot" style="background:var(--p)"></div>
+  <!-- L1 条 -->
+  <div style="position:absolute;top:84px;left:48px;right:48px;background:var(--g3);border:1.5px solid var(--g);border-radius:var(--radius);padding:12px 18px">
+    <span style="font-weight:700;color:var(--g);font-size:13px;margin-right:14px">L1 识别</span>
+    <span class="txt" style="font-size:11.5px">T1.1 曲面基元识别（平面/圆柱/圆锥/球/环面/样条 + 参数）｜T1.2 加工特征识别（孔/槽/凸台/倒角，MFCAD++ 风格）｜T1.3 语义分类与计数 —— 标签全部来自 kernel 与生成程序，<b>100% 自动判卷</b></span>
+  </div>
+  <!-- L2 主体 -->
+  <div style="position:absolute;top:158px;left:48px;width:600px">
+    <table style="width:100%">
+      <tr><th style="width:130px">L2 任务</th><th>示例</th></tr>
+      <tr><td><b>T2.1 拓扑计数</b></td><td>"几个面？亏格是多少？"（欧拉公式 V−E+F=2−2g 自动验证）</td></tr>
+      <tr><td><b>T2.2 邻接问答</b></td><td>"面 #3 与面 #7 是否共享边？与圆柱面相邻的面有哪些？"</td></tr>
+      <tr><td><b>T2.3 缺陷定位</b></td><td>注入缺陷（删面/自交/非流形）→ 判合法性并指出问题位置</td></tr>
+      <tr><td><b>T2.4 拓扑等价</b></td><td>几何参数不同的两个模型，拓扑是否同构？</td></tr>
+    </table>
+    <div class="box" style="background:var(--bg2);border:1px solid var(--card-b);margin-top:12px">
+      <div style="font-weight:600;color:var(--title);font-size:12px;margin-bottom:4px">为什么 L2 重要：L4 的 validity 瓶颈在这里诊断</div>
+      <div class="txt" style="font-size:11.5px">HoLa 报告 84% validity → 16% 被 kernel 拒收。生成非法是因为<b>根本不懂拓扑</b>，还是<b>懂但生成时丢失</b>？只看 L4 永远无法回答，L2 单独考拓扑才能回答</div>
+    </div>
+  </div>
+  <!-- L2 样题卡 -->
+  <div style="position:absolute;top:158px;left:672px;right:48px">
+    <div class="box" style="background:var(--p3);border:1.5px solid var(--p);height:100%">
+      <div style="font-weight:700;color:var(--p);font-size:12px;margin-bottom:8px">样题（六角螺母：六棱柱 + 中心通孔）</div>
+      <div class="card" style="height:120px;margin-bottom:10px">[螺母线框渲染图：标注 6 侧面 + 顶/底 + 孔圆柱面]</div>
+      <div class="txt" style="font-size:11.5px">
+        <b>Q：</b>共几个面？亏格？<br>
+        <b>A：</b>9 个面、亏格 1<br>
+        <span style="color:var(--muted);font-size:10.5px">顶/底面各含一个圆形<b>内环</b>——内环不增加面数。区分"真懂 B-Rep 结构"与"数表面块数"的细节</span>
+      </div>
+      <div style="margin-top:8px;font-size:10px;color:var(--p);font-weight:600">Oracle：kernel TopExp 遍历计数，零人工</div>
+    </div>
+  </div>
+  <div class="pn">4/9</div>
+</div>
+
+<!-- ═══════════════════════ P5 L3 推理 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>L3 推理：模型对几何引擎的"心智模型"有多准</h2><div class="hdr-line" style="background:var(--b)"></div><div class="hdr-sub">kernel 真实执行反事实分支，答案精确可知 —— 布尔推理直接对接求交研究</div></div>
+  <div class="dot" style="background:var(--b)"></div>
+  <div style="position:absolute;top:84px;left:48px;width:430px">
+    <table style="width:100%">
+      <tr><th style="width:140px">任务</th><th>形式</th></tr>
+      <tr><td><b>T3.1 程序→几何</b></td><td>给 CAD 序列（不给图）问形状属性；或反向选序列</td></tr>
+      <tr><td><b>T3.2 参数反事实</b></td><td>"参数从 10 改 20，孔会穿透吗？体积变多少？"</td></tr>
+      <tr><td><b>T3.3 布尔推理</b></td><td>给 A、B 和布尔操作，预测结果拓扑/连通性</td></tr>
+      <tr><td><b>T3.4 对称与分解</b></td><td>识别对称面/旋转轴；分解为"基元+布尔"构造树</td></tr>
+    </table>
+    <div class="box" style="background:var(--b3);border:1.5px solid var(--b);margin-top:14px">
+      <div class="txt" style="font-size:11.5px"><b>指标：</b>MCQ 准确率（杜绝评分模糊）+ 反事实一致性（一组只改一个参数的题答案自洽）+ 跨表示一致性</div>
+    </div>
+  </div>
+  <!-- 样题 showcase -->
+  <div style="position:absolute;top:84px;left:502px;right:48px">
+    <div class="box" style="background:var(--bg2);border:1.5px solid var(--b);margin-bottom:12px">
+      <div style="font-weight:700;color:var(--b);font-size:12px;margin-bottom:6px">样题 ⭐ 参数反事实（盲孔 → 通孔）</div>
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+        <div class="card" style="flex:1;height:86px">[40×30×20 板<br>盲孔深 15<br><b>8 个面</b>]</div>
+        <div style="font-size:18px;color:var(--b);font-weight:700">→</div>
+        <div class="card" style="flex:1;height:86px">[孔深改 25<br>穿透成通孔<br><b>7 个面</b>]</div>
+      </div>
+      <div class="txt" style="font-size:11.5px"><b>Q：</b>孔深 15→25，面数如何变化？<b>A：</b>8→7——孔底平面消失，底面新增内环但面数不变。<span style="color:var(--muted)">模型答对的前提是在"心里"执行这次几何运算</span></div>
+    </div>
+    <div class="box" style="background:var(--bg2);border:1.5px solid var(--b)">
+      <div style="font-weight:700;color:var(--b);font-size:12px;margin-bottom:6px">样题 · 布尔分裂（连通性变化）</div>
+      <div class="txt" style="font-size:11.5px">圆柱 A（⌀20×40）− 长方体 B（30×30×10，同心）= ？<br><b>A：两个分离实体</b>——长方体从中段切断圆柱。经典的"布尔运算改变连通性"考点，<b>模型预测的正是 kernel 求交算法计算的</b></div>
+    </div>
+  </div>
+  <div class="pn">5/9</div>
+</div>
+
+<!-- ═══════════════════════ P6 L4 生成 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>L4 生成：统一三层指标，回应"指标不统一"</h2><div class="hdr-line" style="background:var(--o)"></div><div class="hdr-sub">任务覆盖 Phase 1 的 2×2 框架全象限；榜单按"直接 B-Rep / CAD 序列"分赛道</div></div>
+  <div class="dot" style="background:var(--o)"></div>
+  <div style="position:absolute;top:84px;left:48px;right:48px">
+    <table style="width:100%">
+      <tr><th style="width:150px">任务</th><th>输入 → 输出</th><th style="width:280px">对应现有研究</th></tr>
+      <tr><td><b>T4.1 条件重建</b></td><td>点云 / mesh / 单视图 / 多视图 → B-Rep 或 CAD 序列</td><td>Point2CAD · ComplexGen · TransCAD · CAD-Recode</td></tr>
+      <tr><td><b>T4.2 文本生成</b></td><td>自然语言 → CAD</td><td>Text2CAD 系</td></tr>
+      <tr><td><b>T4.3 编辑补全</b></td><td>已有模型 + 指令 → 新模型；残缺序列 → 补全</td><td>现有评测稀缺</td></tr>
+      <tr><td><b>T4.4 无条件生成</b></td><td>— → 模型分布</td><td>BrepGen · HoLa</td></tr>
+    </table>
+  </div>
+  <div style="position:absolute;top:268px;left:48px;right:48px;display:flex;gap:16px">
+    <div class="box" style="flex:1;background:var(--g3);border:1.5px solid var(--g)">
+      <div style="font-weight:700;color:var(--g);font-size:13px;margin-bottom:4px">① 几何保真</div>
+      <div class="txt" style="font-size:11.5px">Chamfer 距离 · F-score@1mm · 法向一致性<br><span style="color:var(--muted)">"形状像不像"</span></div>
+    </div>
+    <div class="box" style="flex:1;background:var(--p3);border:1.5px solid var(--p)">
+      <div style="font-weight:700;color:var(--p);font-size:13px;margin-bottom:4px">② 拓扑合法 — kernel 硬判定</div>
+      <div class="txt" style="font-size:11.5px">watertight 率 · 自交率 · 非流形率 · 序列可执行率<br><span style="color:var(--muted)">"kernel 收不收"</span></div>
+    </div>
+    <div class="box" style="flex:1;background:var(--o3);border:1.5px solid var(--o)">
+      <div style="font-weight:700;color:var(--o);font-size:13px;margin-bottom:4px">③ 工程可用</div>
+      <div class="txt" style="font-size:11.5px">与参考的拓扑同构率 · 可编辑性 · 参数合理性<br><span style="color:var(--muted)">"能不能进工程流程"</span></div>
+    </div>
+  </div>
+  <div style="position:absolute;top:430px;left:48px;right:48px" class="box">
+    <div style="background:var(--bg2);border:1px solid var(--card-b);border-radius:var(--radius);padding:14px 18px">
+      <div style="font-weight:600;color:var(--title);font-size:12.5px;margin-bottom:4px">评分报告样例：法兰盘点云重建（带 4 个螺栓孔）</div>
+      <div class="txt" style="font-size:11.5px">Chamfer 0.36mm、F1@1mm 0.93（很高）｜watertight ✓｜<b style="color:var(--r)">拓扑同构 ✗：参考 22 面 vs 生成 18 面，螺栓孔只检出 2/4</b> —— 几何分数很高、工程上不可用，正是 Phase 1 的核心教训：<b>三层缺一不可</b>。只报 Chamfer 奖励"像但非法"，只报 validity 奖励保守的简单形状</div>
+    </div>
+  </div>
+  <div class="pn">6/9</div>
+</div>
+
+<!-- ═══════════════════════ P7 L5 工程发现 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>L5 工程发现：几何接地的 agent 评测</h2><div class="hdr-line" style="background:var(--r)"></div><div class="hdr-sub">与 EngiAI 等的本质区别 —— 被测 agent 真正"接触"B-Rep 实体，而非文本问答</div></div>
+  <div class="dot" style="background:var(--r)"></div>
+  <div style="position:absolute;top:84px;left:48px;right:48px;display:flex;gap:16px">
+    <div class="box" style="flex:1;background:var(--r3);border:1.5px solid var(--r)">
+      <div style="font-weight:700;color:var(--r);font-size:13px;margin-bottom:6px">T5.1 可制造性审查（DFM）</div>
+      <div class="txt" style="font-size:11.5px">给 B-Rep 找设计缺陷：薄壁、深孔无法加工、缺工艺圆角、无退刀槽<br><br><b>评判：</b>规则引擎自动判 + 专家金标<br><b>指标：</b>检出率 / 误报率</div>
+    </div>
+    <div class="box" style="flex:1;background:var(--r3);border:1.5px solid var(--r)">
+      <div style="font-weight:700;color:var(--r);font-size:13px;margin-bottom:6px">T5.2 目标导向设计优化</div>
+      <div class="txt" style="font-size:11.5px">"减重 20%，保持孔位与应力上限"——agent 迭代修改 CAD 序列<br><br><b>评判：</b>kernel 验合法 + FEM 验性能<br><b>指标：</b>目标达成度（相对专家基线）</div>
+    </div>
+    <div class="box" style="flex:1;background:var(--r3);border:1.5px solid var(--r)">
+      <div style="font-weight:700;color:var(--r);font-size:13px;margin-bottom:6px">T5.3 设计规律发现</div>
+      <div class="txt" style="font-size:11.5px">给一族参数化设计 + 性能数据，归纳参数-性能规律并外推<br><br><b>评判：</b>held-out 参数组合上验证预测能力（防"编故事"）<br><b>指标：</b>外推误差</div>
+    </div>
+  </div>
+  <div style="position:absolute;top:330px;left:48px;right:48px">
+    <div style="background:var(--title);border-radius:var(--radius);padding:18px 24px;display:flex;align-items:center;gap:24px">
+      <div style="font-size:13px;font-weight:700;color:#fff;white-space:nowrap">Agent 评测闭环</div>
+      <div style="display:flex;align-items:center;gap:10px;flex:1;justify-content:space-around">
+        <span style="color:rgba(255,255,255,.85);font-size:12px;background:rgba(255,255,255,.1);padding:6px 14px;border-radius:16px">Agent（被测）</span>
+        <span style="color:rgba(255,255,255,.4)">⇄</span>
+        <span style="color:rgba(255,255,255,.85);font-size:12px;background:rgba(124,58,237,.35);padding:6px 14px;border-radius:16px">CAD Kernel 查询/修改</span>
+        <span style="color:rgba(255,255,255,.4)">⇄</span>
+        <span style="color:rgba(255,255,255,.85);font-size:12px;background:rgba(220,38,38,.3);padding:6px 14px;border-radius:16px">FEM 仿真 / 规则引擎</span>
+        <span style="color:rgba(255,255,255,.4)">→</span>
+        <span style="color:rgba(255,255,255,.85);font-size:12px;background:rgba(34,145,106,.3);padding:6px 14px;border-radius:16px">达成度评分</span>
+      </div>
+    </div>
+    <div class="txt" style="font-size:11.5px;margin-top:12px;color:var(--muted)">过程指标同时记录：kernel 调用次数、迭代轮数（刻画效率）。仿真离线预计算控制评测成本。规模最小（200–500 例）但含金量最高，是五级中唯一需要实质人工投入的级别。</div>
+  </div>
+  <div style="position:absolute;bottom:20px;left:48px;right:48px;text-align:center">
+    <div style="display:inline-block;background:var(--title);color:#fff;padding:8px 28px;border-radius:20px;font-size:13px;font-weight:600">金字塔顶端：以真实几何为对象的开放式工程能力 —— 现有工程 agent 评测从未做到</div>
+  </div>
+  <div class="pn">7/9</div>
+</div>
+
+<!-- ═══════════════════════ P8 管线与协议 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>数据管线 · 评测协议 · 计分</h2><div class="hdr-line" style="background:var(--p)"></div><div class="hdr-sub">题目可追溯、可复现、可换题 —— 防数据污染由机制保证而非承诺</div></div>
+  <div class="dot" style="background:var(--p)"></div>
+  <!-- 左：管线 -->
+  <div style="position:absolute;top:84px;left:48px;width:430px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div class="box" style="background:var(--g3);border:1.5px solid var(--g);padding:10px 16px">
+        <b style="font-size:12px;color:var(--g)">种子库</b><span class="txt" style="font-size:11px">　ABC / DeepCAD / Fusion 360 去重净化 + 程序化生成补充；私有 held-out 子集</span>
+      </div>
+      <div style="text-align:center;color:var(--muted);font-size:14px;line-height:.8">↓</div>
+      <div class="box" style="background:var(--p3);border:1.5px solid var(--p);padding:10px 16px">
+        <b style="font-size:12px;color:var(--p)">Kernel 处理层（OpenCascade）</b>
+        <div class="txt" style="font-size:11px">多模态派生（6 种表示）· GT 提取（拓扑图/几何量/合法性）· 缺陷注入器（7 类非法模式）· 反事实执行器（改参/布尔）</div>
+      </div>
+      <div style="text-align:center;color:var(--muted);font-size:14px;line-height:.8">↓</div>
+      <div class="box" style="background:var(--b3);border:1.5px solid var(--b);padding:10px 16px">
+        <b style="font-size:12px;color:var(--b)">题目装配</b><span class="txt" style="font-size:11px">　JSON 自包含记录（种子/模态/oracle/再生成键）；按面数分三档难度（≤20 / 21–100 / &gt;100）</span>
+      </div>
+      <div style="text-align:center;color:var(--muted);font-size:14px;line-height:.8">↓</div>
+      <div class="box" style="background:var(--o3);border:1.5px solid var(--o);padding:10px 16px">
+        <b style="font-size:12px;color:var(--o)">质检</b><span class="txt" style="font-size:11px">　答案唯一性校验 + 跨表示一致性校验 + 人工抽检 5% + L5 专家审核</span>
+      </div>
+    </div>
+  </div>
+  <!-- 右：协议与计分 -->
+  <div style="position:absolute;top:84px;left:506px;right:48px">
+    <table style="width:100%">
+      <tr><th>被测对象</th><th>输入</th><th>参与级别</th></tr>
+      <tr><td>通用 LLM</td><td>STEP / 序列 / 文本</td><td>L1–L5</td></tr>
+      <tr><td>VLM / 多模态大模型</td><td>渲染图 + 文本</td><td>L1–L5</td></tr>
+      <tr><td>3D 专用模型</td><td>点云 / B-Rep 图</td><td>可单项参加</td></tr>
+    </table>
+    <div class="box" style="background:var(--bg2);border:1px solid var(--card-b);margin-top:12px">
+      <div style="font-weight:600;color:var(--title);font-size:12.5px;margin-bottom:6px">计分协议</div>
+      <div class="txt" style="font-size:11.5px">
+        <b>GeoIQ = Σ αₖ·Sₖ</b>，α = (0.15, 0.20, 0.20, 0.25, 0.20)<br>
+        <b>等级认证</b>：Level k 要求 S₁…Sₖ 全部 ≥ 60（逐级过线）<br>
+        <b>一致性 C</b> 独立公示，不计入 GeoIQ（不惩罚单模态专用模型）<br>
+        所有得分按难度档分别公示，防简单题灌水
+      </div>
+    </div>
+    <div class="card" style="height:120px;margin-top:12px">[五维雷达图示意：两个模型对比<br>—— 一个"L4 高 L2 低"（会生成不懂拓扑）<br>一个均衡型，等级认证结果不同]</div>
+  </div>
+  <div class="pn">8/9</div>
+</div>
+
+<!-- ═══════════════════════ P9 路线图与贡献 ═══════════════════════ -->
+<div class="s">
+  <div class="hdr"><h2>路线图 · 预期贡献 · 诚实边界</h2><div class="hdr-line" style="background:linear-gradient(90deg,var(--g),var(--p),var(--r))"></div><div class="hdr-sub">零期 Pilot 两到三周、一人可完成 —— 我可以立即着手</div></div>
+  <div class="dot" style="background:var(--g)"></div>
+  <!-- 路线图 -->
+  <div style="position:absolute;top:84px;left:48px;right:48px;display:flex;gap:12px">
+    <div class="box" style="flex:1.2;background:var(--g3);border:2px solid var(--g)">
+      <div style="font-weight:700;color:var(--g);font-size:12.5px">零期 Pilot（2–3 周）</div>
+      <div class="txt" style="font-size:11px">50 个 ABC 种子 + pythonOCC 跑通最小管线；L2/L3 各 100 题；2–3 个大模型试考。<b>验证：答案唯一性 ≥99%、区分度、成本</b></div>
+    </div>
+    <div class="box" style="flex:1;background:var(--p3);border:1.5px solid var(--p)">
+      <div style="font-weight:700;color:var(--p);font-size:12.5px">一期：L2+L3 全量</div>
+      <div class="txt" style="font-size:11px">空白最大、全自动构造、最体现 kernel 特色，性价比最高</div>
+    </div>
+    <div class="box" style="flex:1;background:var(--o3);border:1.5px solid var(--o)">
+      <div style="font-weight:700;color:var(--o);font-size:12.5px">二期：L1+L4</div>
+      <div class="txt" style="font-size:11px">对现有任务/数据/指标做统一化整合</div>
+    </div>
+    <div class="box" style="flex:1;background:var(--r3);border:1.5px solid var(--r)">
+      <div style="font-weight:700;color:var(--r);font-size:12.5px">三期：L5</div>
+      <div class="txt" style="font-size:11px">依赖仿真与专家资源，基于前两期反馈设计</div>
+    </div>
+  </div>
+  <!-- 贡献 -->
+  <div style="position:absolute;top:268px;left:48px;width:560px">
+    <div style="font-weight:700;color:var(--title);font-size:13px;margin-bottom:8px">预期贡献</div>
+    <div class="txt" style="font-size:12px">
+      <ul class="bl">
+        <li><b>首个五级统一的几何智能评价体系</b>（现有全是单级切片）</li>
+        <li><b>首个把拓扑理解作为独立考点</b>的 benchmark</li>
+        <li><b>Kernel-as-Oracle 自动出题/判卷范式</b>，机制性防数据污染</li>
+        <li><b>统一 L4 生成指标</b>，解决方法间无法横向比较的问题</li>
+        <li><b>几何接地的工程 agent 评测</b>，把"发现"落到真实 B-Rep 上</li>
+      </ul>
+    </div>
+  </div>
+  <!-- 诚实边界 -->
+  <div style="position:absolute;top:268px;left:640px;right:48px">
+    <div class="box" style="background:var(--bg2);border:1px solid var(--card-b)">
+      <div style="font-weight:700;color:var(--title);font-size:13px;margin-bottom:6px">风险与开放问题（诚实说明）</div>
+      <div class="txt" style="font-size:11.5px">
+        <ul class="bl">
+          <li>L5 评判客观性：用仿真/规则 oracle + 外推验证压缩主观空间，专家成本仍是瓶颈</li>
+          <li>复杂 B-Rep 的 STEP 超出 LLM 上下文 → 需紧凑序列化或设复杂度上限</li>
+          <li>"理解" vs "模式匹配"：一致性 + 换题是应对，不构成完备证明</li>
+          <li>DFM/FEM 我尚无实践经验，L5 为框架性设计，盼老师指导细化</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:20px;left:48px;right:48px;text-align:center">
+    <div style="display:inline-block;background:var(--title);color:#fff;padding:8px 28px;border-radius:20px;font-size:13px;font-weight:600">GeometryBench：让"几何智能"从一个口号变成一张可以打分的考卷</div>
+  </div>
+  <div class="pn">9/9</div>
+</div>
+
+</div>
+</body>
+</html>
