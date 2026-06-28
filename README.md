@@ -151,5 +151,24 @@ code/
   make_hard.py       hard 变体：加噪声+遮挡模拟扫描（无需重新提取）
   smoke_test.py      工具链冒烟测试（合成带孔方块，无需 ABC）
 l1_artifacts/        统计 json + 两张图 + 题目样本（hard/ 为噪声变体的图与基线）
+cadrille_eval/       SOTA 方法（cadrille）点云→B-Rep 重建评测（见 §8）
 proposal_draft.md    GeometryBench 五级体系设计文档
 ```
+
+---
+
+## 8. 进阶：SOTA 方法重建评测（cadrille）
+
+在**同一 ABC 数据底座**上评测了 SOTA 的点云→B-Rep 方法 **cadrille**（ICLR 2026，点云→CadQuery 代码→B-Rep）。300 个 ABC 模型，单张 RTX 4090：
+
+| 指标 | cadrille-rl |
+|---|---|
+| 代码可执行率 | **100%** (300/300) |
+| B-Rep 合法率 | **99%** |
+| F-score@0.02 | **0.67** |
+| Median Chamfer | 0.037 |
+
+![GT vs cadrille 重建](cadrille_eval/results/fig_recon_gallery.png)
+<sub>上排 GT，下排 cadrille 重建；左 3 = Chamfer 最小，右 3 = 最大。</sub>
+
+**发现**：cadrille 极可靠地产出**合法 CAD**（100% 可执行、99% 合法），但几何保真度中等——简单形状（圆柱/方块/空心筒）几近完美，**复杂多分支零件（管接头、弯头、T 形件）只能简化近似**。根因是分布偏移（cadrille 训练于较简单的 DeepCAD，而 ABC 更杂）。这正是 GeometryBench 的价值：**暴露 SOTA 方法在多样真实几何上的能力边界**。完整说明与复现见 [`cadrille_eval/RESULTS.md`](cadrille_eval/RESULTS.md)。

@@ -1,0 +1,2114 @@
+{
+ "summary": {
+  "n_models": 300,
+  "exec_success_rate": 1.0,
+  "mean_chamfer": 0.04628,
+  "median_chamfer": 0.03744,
+  "mean_fscore@0.02": 0.673,
+  "brep_valid_rate": 0.99,
+  "method": "cadrille-rl",
+  "test_set": "abc_test_stl"
+ },
+ "per_model": [
+  {
+   "id": "00000001_1ffb81a71e5b402e966b9341_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03051,
+   "fscore": 0.754,
+   "valid": true
+  },
+  {
+   "id": "00000005_d4fe04f0f5f84b52bd4f10e4_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01907,
+   "fscore": 0.9488,
+   "valid": true
+  },
+  {
+   "id": "00000007_b33a147f86da49879455d286_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02219,
+   "fscore": 0.9249,
+   "valid": true
+  },
+  {
+   "id": "00000009_9b3d6a97e8de4aa193b81000_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04866,
+   "fscore": 0.4962,
+   "valid": true
+  },
+  {
+   "id": "00000010_b4b99d35e04b4277931f9a9c_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0686,
+   "fscore": 0.4023,
+   "valid": true
+  },
+  {
+   "id": "00000013_c2f4d27f35ed4c138caf5c18_step_000",
+   "exec_ok": true,
+   "chamfer": 0.054,
+   "fscore": 0.4232,
+   "valid": true
+  },
+  {
+   "id": "00000014_5b1c2f8a8c6f40fdaae1e69d_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01637,
+   "fscore": 0.9438,
+   "valid": true
+  },
+  {
+   "id": "00000017_e8e79d1385fd4c78be414f6c_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0229,
+   "fscore": 0.9493,
+   "valid": true
+  },
+  {
+   "id": "00000018_e8e79d1385fd4c78be414f6c_step_001",
+   "exec_ok": true,
+   "chamfer": 0.03546,
+   "fscore": 0.6837,
+   "valid": true
+  },
+  {
+   "id": "00000019_e8e79d1385fd4c78be414f6c_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03214,
+   "fscore": 0.7319,
+   "valid": true
+  },
+  {
+   "id": "00000021_ad34a3f60c4a4caa99646600_step_001",
+   "exec_ok": true,
+   "chamfer": 0.1285,
+   "fscore": 0.2882,
+   "valid": true
+  },
+  {
+   "id": "00000022_ad34a3f60c4a4caa99646600_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03817,
+   "fscore": 0.5737,
+   "valid": true
+  },
+  {
+   "id": "00000025_ad34a3f60c4a4caa99646600_step_005",
+   "exec_ok": true,
+   "chamfer": 0.01587,
+   "fscore": 0.9291,
+   "valid": true
+  },
+  {
+   "id": "00000027_ad34a3f60c4a4caa99646600_step_007",
+   "exec_ok": true,
+   "chamfer": 0.04422,
+   "fscore": 0.6411,
+   "valid": true
+  },
+  {
+   "id": "00000028_ad34a3f60c4a4caa99646600_step_008",
+   "exec_ok": true,
+   "chamfer": 0.02913,
+   "fscore": 0.8283,
+   "valid": true
+  },
+  {
+   "id": "00000030_ad34a3f60c4a4caa99646600_step_010",
+   "exec_ok": true,
+   "chamfer": 0.02261,
+   "fscore": 0.9347,
+   "valid": true
+  },
+  {
+   "id": "00000032_ad34a3f60c4a4caa99646600_step_012",
+   "exec_ok": true,
+   "chamfer": 0.01676,
+   "fscore": 0.969,
+   "valid": true
+  },
+  {
+   "id": "00000035_6763f7e2f51a489caaf599f0_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05242,
+   "fscore": 0.5108,
+   "valid": true
+  },
+  {
+   "id": "00000036_b169abf5f2444251b529c688_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04171,
+   "fscore": 0.4978,
+   "valid": true
+  },
+  {
+   "id": "00000037_c7d977f326364e35bb5b5d27_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05606,
+   "fscore": 0.652,
+   "valid": true
+  },
+  {
+   "id": "00000045_c7d977f326364e35bb5b5d27_step_008",
+   "exec_ok": true,
+   "chamfer": 0.09692,
+   "fscore": 0.3932,
+   "valid": true
+  },
+  {
+   "id": "00000047_1a67c6032bbd479492910b39_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02648,
+   "fscore": 0.761,
+   "valid": true
+  },
+  {
+   "id": "00000049_aa208c45e8734584a147f595_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02092,
+   "fscore": 0.908,
+   "valid": true
+  },
+  {
+   "id": "00000051_666139e3bff64d4e8a6ce183_step_000",
+   "exec_ok": true,
+   "chamfer": 0.13643,
+   "fscore": 0.4776,
+   "valid": true
+  },
+  {
+   "id": "00000054_666139e3bff64d4e8a6ce183_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01553,
+   "fscore": 0.9651,
+   "valid": true
+  },
+  {
+   "id": "00000056_666139e3bff64d4e8a6ce183_step_005",
+   "exec_ok": true,
+   "chamfer": 0.03177,
+   "fscore": 0.793,
+   "valid": true
+  },
+  {
+   "id": "00000059_767e4372b5f94a88a7a17d90_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07318,
+   "fscore": 0.6195,
+   "valid": true
+  },
+  {
+   "id": "00000060_767e4372b5f94a88a7a17d90_step_001",
+   "exec_ok": true,
+   "chamfer": 0.07013,
+   "fscore": 0.3973,
+   "valid": true
+  },
+  {
+   "id": "00000061_767e4372b5f94a88a7a17d90_step_002",
+   "exec_ok": true,
+   "chamfer": 0.0234,
+   "fscore": 0.9038,
+   "valid": true
+  },
+  {
+   "id": "00000062_767e4372b5f94a88a7a17d90_step_003",
+   "exec_ok": true,
+   "chamfer": 0.02684,
+   "fscore": 0.8138,
+   "valid": true
+  },
+  {
+   "id": "00000063_767e4372b5f94a88a7a17d90_step_004",
+   "exec_ok": true,
+   "chamfer": 0.0165,
+   "fscore": 0.9987,
+   "valid": true
+  },
+  {
+   "id": "00000065_767e4372b5f94a88a7a17d90_step_006",
+   "exec_ok": true,
+   "chamfer": 0.03176,
+   "fscore": 0.7992,
+   "valid": true
+  },
+  {
+   "id": "00000071_767e4372b5f94a88a7a17d90_step_012",
+   "exec_ok": true,
+   "chamfer": 0.01515,
+   "fscore": 0.9725,
+   "valid": true
+  },
+  {
+   "id": "00000074_767e4372b5f94a88a7a17d90_step_015",
+   "exec_ok": true,
+   "chamfer": 0.05571,
+   "fscore": 0.432,
+   "valid": true
+  },
+  {
+   "id": "00000075_767e4372b5f94a88a7a17d90_step_016",
+   "exec_ok": true,
+   "chamfer": 0.03996,
+   "fscore": 0.716,
+   "valid": true
+  },
+  {
+   "id": "00000080_ed3cecad25c64f7abea4cf64_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04118,
+   "fscore": 0.6341,
+   "valid": true
+  },
+  {
+   "id": "00000083_9ea934d3400e45fb9d190941_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0813,
+   "fscore": 0.3492,
+   "valid": true
+  },
+  {
+   "id": "00000086_b4f9335a60a14cecaa599159_step_001",
+   "exec_ok": true,
+   "chamfer": 0.05104,
+   "fscore": 0.4173,
+   "valid": true
+  },
+  {
+   "id": "00000087_b4f9335a60a14cecaa599159_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04817,
+   "fscore": 0.4271,
+   "valid": true
+  },
+  {
+   "id": "00000088_169bec34317b46e98eb1a403_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01887,
+   "fscore": 0.9509,
+   "valid": true
+  },
+  {
+   "id": "00000089_169bec34317b46e98eb1a403_step_001",
+   "exec_ok": true,
+   "chamfer": 0.12674,
+   "fscore": 0.2915,
+   "valid": true
+  },
+  {
+   "id": "00000096_fcd027a9411a4ae7ac146826_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03618,
+   "fscore": 0.7451,
+   "valid": true
+  },
+  {
+   "id": "00000097_a6920073c7fe448584f0d647_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03125,
+   "fscore": 0.8221,
+   "valid": true
+  },
+  {
+   "id": "00000098_72cf0f9ca5324822a4d41a80_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02307,
+   "fscore": 0.9201,
+   "valid": true
+  },
+  {
+   "id": "00000099_7911d7c4c4b9417d92801ff6_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08738,
+   "fscore": 0.5705,
+   "valid": true
+  },
+  {
+   "id": "00000100_5ed74bccca6f4e89829bcb5e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02335,
+   "fscore": 0.8647,
+   "valid": true
+  },
+  {
+   "id": "00000102_5ed74bccca6f4e89829bcb5e_step_002",
+   "exec_ok": true,
+   "chamfer": 0.02383,
+   "fscore": 0.8957,
+   "valid": true
+  },
+  {
+   "id": "00000108_ce24e0cbec8e45c89735d148_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05711,
+   "fscore": 0.4902,
+   "valid": true
+  },
+  {
+   "id": "00000110_ce24e0cbec8e45c89735d148_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04201,
+   "fscore": 0.6808,
+   "valid": true
+  },
+  {
+   "id": "00000113_ce24e0cbec8e45c89735d148_step_005",
+   "exec_ok": true,
+   "chamfer": 0.06147,
+   "fscore": 0.4884,
+   "valid": true
+  },
+  {
+   "id": "00000114_ce24e0cbec8e45c89735d148_step_006",
+   "exec_ok": true,
+   "chamfer": 0.0508,
+   "fscore": 0.5626,
+   "valid": true
+  },
+  {
+   "id": "00000115_ce24e0cbec8e45c89735d148_step_007",
+   "exec_ok": true,
+   "chamfer": 0.07236,
+   "fscore": 0.2392,
+   "valid": true
+  },
+  {
+   "id": "00000116_ce24e0cbec8e45c89735d148_step_008",
+   "exec_ok": true,
+   "chamfer": 0.02263,
+   "fscore": 0.9236,
+   "valid": true
+  },
+  {
+   "id": "00000117_ce24e0cbec8e45c89735d148_step_009",
+   "exec_ok": true,
+   "chamfer": 0.05102,
+   "fscore": 0.6181,
+   "valid": true
+  },
+  {
+   "id": "00000118_ce24e0cbec8e45c89735d148_step_010",
+   "exec_ok": true,
+   "chamfer": 0.03703,
+   "fscore": 0.6302,
+   "valid": true
+  },
+  {
+   "id": "00000119_ce24e0cbec8e45c89735d148_step_011",
+   "exec_ok": true,
+   "chamfer": 0.0215,
+   "fscore": 0.9371,
+   "valid": true
+  },
+  {
+   "id": "00000121_43c44d81ee2f44428314b518_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07767,
+   "fscore": 0.496,
+   "valid": true
+  },
+  {
+   "id": "00000122_43c44d81ee2f44428314b518_step_001",
+   "exec_ok": true,
+   "chamfer": 0.06655,
+   "fscore": 0.298,
+   "valid": true
+  },
+  {
+   "id": "00000123_b70e8b6a4f0046dc80a97c57_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02543,
+   "fscore": 0.865,
+   "valid": true
+  },
+  {
+   "id": "00000124_807e1c7fc3594af09fd6f7c4_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07133,
+   "fscore": 0.3724,
+   "valid": true
+  },
+  {
+   "id": "00000125_e18c7feacfb54f3880659b43_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02248,
+   "fscore": 0.8583,
+   "valid": true
+  },
+  {
+   "id": "00000128_e18c7feacfb54f3880659b43_step_003",
+   "exec_ok": true,
+   "chamfer": 0.04782,
+   "fscore": 0.5304,
+   "valid": true
+  },
+  {
+   "id": "00000131_945244874ed84e599987daa9_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02113,
+   "fscore": 0.946,
+   "valid": true
+  },
+  {
+   "id": "00000132_438507a38e404bfdbd51a16b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0205,
+   "fscore": 0.9549,
+   "valid": true
+  },
+  {
+   "id": "00000133_08b739e0511f4305b161cd05_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02198,
+   "fscore": 0.9371,
+   "valid": true
+  },
+  {
+   "id": "00000134_1418f3c3ca954e799c8860af_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03029,
+   "fscore": 0.7439,
+   "valid": true
+  },
+  {
+   "id": "00000135_5c71ed27ac0945e4933d7c76_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04246,
+   "fscore": 0.6432,
+   "valid": true
+  },
+  {
+   "id": "00000138_2fc54fcd110d4f49969163c4_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01749,
+   "fscore": 0.9982,
+   "valid": true
+  },
+  {
+   "id": "00000144_2fc54fcd110d4f49969163c4_step_007",
+   "exec_ok": true,
+   "chamfer": 0.02577,
+   "fscore": 0.8492,
+   "valid": true
+  },
+  {
+   "id": "00000146_1d9ece3a9c8348a5a11e7153_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01859,
+   "fscore": 0.9807,
+   "valid": true
+  },
+  {
+   "id": "00000147_d9a2aa6d24764b809c265460_step_000",
+   "exec_ok": true,
+   "chamfer": 0.09413,
+   "fscore": 0.3042,
+   "valid": true
+  },
+  {
+   "id": "00000148_d9a2aa6d24764b809c265460_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04864,
+   "fscore": 0.4726,
+   "valid": true
+  },
+  {
+   "id": "00000149_d9a2aa6d24764b809c265460_step_002",
+   "exec_ok": true,
+   "chamfer": 0.05229,
+   "fscore": 0.4889,
+   "valid": true
+  },
+  {
+   "id": "00000150_a951550b8a1043a68423c541_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05138,
+   "fscore": 0.5385,
+   "valid": true
+  },
+  {
+   "id": "00000151_a951550b8a1043a68423c541_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04283,
+   "fscore": 0.648,
+   "valid": true
+  },
+  {
+   "id": "00000152_a951550b8a1043a68423c541_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04725,
+   "fscore": 0.5815,
+   "valid": true
+  },
+  {
+   "id": "00000158_559b9a459ca348529d9f4761_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06675,
+   "fscore": 0.2923,
+   "valid": true
+  },
+  {
+   "id": "00000159_48a3f2e6f67a4aea9d6d097b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01232,
+   "fscore": 0.9999,
+   "valid": true
+  },
+  {
+   "id": "00000160_48a3f2e6f67a4aea9d6d097b_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04164,
+   "fscore": 0.7283,
+   "valid": true
+  },
+  {
+   "id": "00000167_9c0acf3497254733a0db3edc_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06347,
+   "fscore": 0.5166,
+   "valid": true
+  },
+  {
+   "id": "00000169_154ce2da51284e048f6177f9_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06636,
+   "fscore": 0.4034,
+   "valid": true
+  },
+  {
+   "id": "00000171_b21aa794b6b64d87a57c245e_step_001",
+   "exec_ok": true,
+   "chamfer": 0.024,
+   "fscore": 0.8684,
+   "valid": true
+  },
+  {
+   "id": "00000173_b21aa794b6b64d87a57c245e_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01192,
+   "fscore": 1.0,
+   "valid": true
+  },
+  {
+   "id": "00000175_b21aa794b6b64d87a57c245e_step_005",
+   "exec_ok": true,
+   "chamfer": 0.01905,
+   "fscore": 0.9702,
+   "valid": true
+  },
+  {
+   "id": "00000176_b21aa794b6b64d87a57c245e_step_006",
+   "exec_ok": true,
+   "chamfer": 0.03122,
+   "fscore": 0.7296,
+   "valid": true
+  },
+  {
+   "id": "00000177_b21aa794b6b64d87a57c245e_step_007",
+   "exec_ok": true,
+   "chamfer": 0.02044,
+   "fscore": 0.951,
+   "valid": true
+  },
+  {
+   "id": "00000178_b21aa794b6b64d87a57c245e_step_008",
+   "exec_ok": true,
+   "chamfer": 0.02094,
+   "fscore": 0.9554,
+   "valid": true
+  },
+  {
+   "id": "00000179_b21aa794b6b64d87a57c245e_step_009",
+   "exec_ok": true,
+   "chamfer": 0.01937,
+   "fscore": 0.9543,
+   "valid": true
+  },
+  {
+   "id": "00000181_b21aa794b6b64d87a57c245e_step_011",
+   "exec_ok": true,
+   "chamfer": 0.03952,
+   "fscore": 0.627,
+   "valid": true
+  },
+  {
+   "id": "00000182_b21aa794b6b64d87a57c245e_step_012",
+   "exec_ok": true,
+   "chamfer": 0.04376,
+   "fscore": 0.6142,
+   "valid": true
+  },
+  {
+   "id": "00000184_6c4172e8a17140f89d3b1c0a_step_001",
+   "exec_ok": true,
+   "chamfer": 0.03056,
+   "fscore": 0.8012,
+   "valid": true
+  },
+  {
+   "id": "00000185_6c4172e8a17140f89d3b1c0a_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03107,
+   "fscore": 0.7876,
+   "valid": true
+  },
+  {
+   "id": "00000186_6c4172e8a17140f89d3b1c0a_step_003",
+   "exec_ok": true,
+   "chamfer": 0.02088,
+   "fscore": 0.929,
+   "valid": true
+  },
+  {
+   "id": "00000190_185ecbc783f34408aef52119_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02627,
+   "fscore": 0.8413,
+   "valid": true
+  },
+  {
+   "id": "00000191_222c0df7c7474deb967b5baa_step_000",
+   "exec_ok": true,
+   "chamfer": 0.09305,
+   "fscore": 0.2985,
+   "valid": true
+  },
+  {
+   "id": "00000192_222c0df7c7474deb967b5baa_step_001",
+   "exec_ok": true,
+   "chamfer": 0.10254,
+   "fscore": 0.234,
+   "valid": true
+  },
+  {
+   "id": "00000193_222c0df7c7474deb967b5baa_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04516,
+   "fscore": 0.508,
+   "valid": true
+  },
+  {
+   "id": "00000195_5513cf564670446690695cec_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02765,
+   "fscore": 0.8468,
+   "valid": true
+  },
+  {
+   "id": "00000197_826494e894454504b0971fd1_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04868,
+   "fscore": 0.5741,
+   "valid": true
+  },
+  {
+   "id": "00000198_826494e894454504b0971fd1_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02735,
+   "fscore": 0.8312,
+   "valid": true
+  },
+  {
+   "id": "00000199_826494e894454504b0971fd1_step_002",
+   "exec_ok": true,
+   "chamfer": 0.01664,
+   "fscore": 0.9988,
+   "valid": true
+  },
+  {
+   "id": "00000200_826494e894454504b0971fd1_step_003",
+   "exec_ok": true,
+   "chamfer": 0.03611,
+   "fscore": 0.7269,
+   "valid": true
+  },
+  {
+   "id": "00000202_89aafdfc86b04301be0478c6_step_000",
+   "exec_ok": true,
+   "chamfer": 0.10251,
+   "fscore": 0.2352,
+   "valid": true
+  },
+  {
+   "id": "00000203_89aafdfc86b04301be0478c6_step_001",
+   "exec_ok": true,
+   "chamfer": 0.08674,
+   "fscore": 0.2852,
+   "valid": true
+  },
+  {
+   "id": "00000204_89aafdfc86b04301be0478c6_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04875,
+   "fscore": 0.4977,
+   "valid": true
+  },
+  {
+   "id": "00000206_27417003e762409185cb2b69_step_000",
+   "exec_ok": true,
+   "chamfer": 0.11526,
+   "fscore": 0.2886,
+   "valid": true
+  },
+  {
+   "id": "00000208_33bd159d563f438fbbebd9fa_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05468,
+   "fscore": 0.5188,
+   "valid": true
+  },
+  {
+   "id": "00000209_33bd159d563f438fbbebd9fa_step_001",
+   "exec_ok": true,
+   "chamfer": 0.16209,
+   "fscore": 0.0805,
+   "valid": true
+  },
+  {
+   "id": "00000210_33bd159d563f438fbbebd9fa_step_002",
+   "exec_ok": true,
+   "chamfer": 0.05125,
+   "fscore": 0.4957,
+   "valid": true
+  },
+  {
+   "id": "00000211_e3ea4a27cfc74c25abff290c_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0832,
+   "fscore": 0.6238,
+   "valid": true
+  },
+  {
+   "id": "00000213_5324c79b172f41e8a49afc6f_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03991,
+   "fscore": 0.7071,
+   "valid": true
+  },
+  {
+   "id": "00000215_5324c79b172f41e8a49afc6f_step_002",
+   "exec_ok": true,
+   "chamfer": 0.07151,
+   "fscore": 0.4303,
+   "valid": true
+  },
+  {
+   "id": "00000218_5324c79b172f41e8a49afc6f_step_005",
+   "exec_ok": true,
+   "chamfer": 0.0798,
+   "fscore": 0.1538,
+   "valid": true
+  },
+  {
+   "id": "00000219_5324c79b172f41e8a49afc6f_step_006",
+   "exec_ok": true,
+   "chamfer": 0.02081,
+   "fscore": 0.9428,
+   "valid": true
+  },
+  {
+   "id": "00000220_5324c79b172f41e8a49afc6f_step_007",
+   "exec_ok": true,
+   "chamfer": 0.05872,
+   "fscore": 0.3726,
+   "valid": true
+  },
+  {
+   "id": "00000221_5324c79b172f41e8a49afc6f_step_008",
+   "exec_ok": true,
+   "chamfer": 0.06095,
+   "fscore": 0.3917,
+   "valid": true
+  },
+  {
+   "id": "00000222_97b354a907114b7183faa9c4_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01912,
+   "fscore": 0.9651,
+   "valid": true
+  },
+  {
+   "id": "00000223_97b354a907114b7183faa9c4_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02528,
+   "fscore": 0.8318,
+   "valid": true
+  },
+  {
+   "id": "00000224_97b354a907114b7183faa9c4_step_002",
+   "exec_ok": true,
+   "chamfer": 0.0192,
+   "fscore": 0.959,
+   "valid": true
+  },
+  {
+   "id": "00000226_000ace8ff6634150be81fe86_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08105,
+   "fscore": 0.3255,
+   "valid": true
+  },
+  {
+   "id": "00000227_000ace8ff6634150be81fe86_step_001",
+   "exec_ok": true,
+   "chamfer": 0.07339,
+   "fscore": 0.2973,
+   "valid": true
+  },
+  {
+   "id": "00000228_000ace8ff6634150be81fe86_step_002",
+   "exec_ok": true,
+   "chamfer": 0.042,
+   "fscore": 0.5442,
+   "valid": true
+  },
+  {
+   "id": "00000229_682d529d5e8c4387bc59b3a1_step_000",
+   "exec_ok": true,
+   "chamfer": 0.00894,
+   "fscore": 0.995,
+   "valid": true
+  },
+  {
+   "id": "00000230_a01a91841c8f48a5bf75924b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.14817,
+   "fscore": 0.0436,
+   "valid": false
+  },
+  {
+   "id": "00000231_f2f1249e743349808fca42a3_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04359,
+   "fscore": 0.6277,
+   "valid": true
+  },
+  {
+   "id": "00000232_5e5904b362dd41179fc77b86_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03463,
+   "fscore": 0.8302,
+   "valid": true
+  },
+  {
+   "id": "00000233_9d5b83dd0a7d477f86f04710_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03834,
+   "fscore": 0.6726,
+   "valid": true
+  },
+  {
+   "id": "00000235_0fb1ef6e79de4ba78e052c4b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.12006,
+   "fscore": 0.3298,
+   "valid": true
+  },
+  {
+   "id": "00000240_4829bc0645d6414d9b5cec31_step_003",
+   "exec_ok": true,
+   "chamfer": 0.11624,
+   "fscore": 0.2631,
+   "valid": true
+  },
+  {
+   "id": "00000241_4829bc0645d6414d9b5cec31_step_004",
+   "exec_ok": true,
+   "chamfer": 0.03664,
+   "fscore": 0.6894,
+   "valid": true
+  },
+  {
+   "id": "00000242_4829bc0645d6414d9b5cec31_step_005",
+   "exec_ok": true,
+   "chamfer": 0.06785,
+   "fscore": 0.3887,
+   "valid": true
+  },
+  {
+   "id": "00000244_4829bc0645d6414d9b5cec31_step_007",
+   "exec_ok": true,
+   "chamfer": 0.05911,
+   "fscore": 0.4288,
+   "valid": true
+  },
+  {
+   "id": "00000246_c78d3dcf76d64ec9b46e7cef_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01947,
+   "fscore": 0.9686,
+   "valid": true
+  },
+  {
+   "id": "00000247_c78d3dcf76d64ec9b46e7cef_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03439,
+   "fscore": 0.7883,
+   "valid": true
+  },
+  {
+   "id": "00000251_66fe5f0992fd4065b4838668_step_000",
+   "exec_ok": true,
+   "chamfer": 0.00483,
+   "fscore": 1.0,
+   "valid": true
+  },
+  {
+   "id": "00000253_e6f00e94f0d94212b8a856bc_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03812,
+   "fscore": 0.6641,
+   "valid": true
+  },
+  {
+   "id": "00000254_10b0a59b1c58452a9ca3b329_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06897,
+   "fscore": 0.3895,
+   "valid": true
+  },
+  {
+   "id": "00000255_845fb06d7f2f4802a806a600_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0325,
+   "fscore": 0.7938,
+   "valid": true
+  },
+  {
+   "id": "00000256_845fb06d7f2f4802a806a600_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02607,
+   "fscore": 0.818,
+   "valid": true
+  },
+  {
+   "id": "00000257_845fb06d7f2f4802a806a600_step_002",
+   "exec_ok": true,
+   "chamfer": 0.02261,
+   "fscore": 0.9151,
+   "valid": true
+  },
+  {
+   "id": "00000264_845fb06d7f2f4802a806a600_step_009",
+   "exec_ok": true,
+   "chamfer": 0.03677,
+   "fscore": 0.6885,
+   "valid": true
+  },
+  {
+   "id": "00000269_845fb06d7f2f4802a806a600_step_014",
+   "exec_ok": true,
+   "chamfer": 0.01115,
+   "fscore": 0.9967,
+   "valid": true
+  },
+  {
+   "id": "00000272_648a7c23a21f4e88bf25ffeb_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03344,
+   "fscore": 0.6781,
+   "valid": true
+  },
+  {
+   "id": "00000277_c740d53bc77c4e1b871b89cf_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0269,
+   "fscore": 0.8674,
+   "valid": true
+  },
+  {
+   "id": "00000278_8f19db5c98a746c49d8075f3_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03329,
+   "fscore": 0.7025,
+   "valid": true
+  },
+  {
+   "id": "00000281_5a6ef3285b89452ea6b390e7_step_002",
+   "exec_ok": true,
+   "chamfer": 0.06124,
+   "fscore": 0.46,
+   "valid": true
+  },
+  {
+   "id": "00000283_5a6ef3285b89452ea6b390e7_step_004",
+   "exec_ok": true,
+   "chamfer": 0.02257,
+   "fscore": 0.9173,
+   "valid": true
+  },
+  {
+   "id": "00000288_58f8ff46b7564e989f9695b7_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02715,
+   "fscore": 0.8916,
+   "valid": true
+  },
+  {
+   "id": "00000290_58f8ff46b7564e989f9695b7_step_003",
+   "exec_ok": true,
+   "chamfer": 0.00902,
+   "fscore": 0.9908,
+   "valid": true
+  },
+  {
+   "id": "00000292_58f8ff46b7564e989f9695b7_step_005",
+   "exec_ok": true,
+   "chamfer": 0.01246,
+   "fscore": 0.9999,
+   "valid": true
+  },
+  {
+   "id": "00000293_58f8ff46b7564e989f9695b7_step_006",
+   "exec_ok": true,
+   "chamfer": 0.02106,
+   "fscore": 0.9327,
+   "valid": true
+  },
+  {
+   "id": "00000294_c4af21184d19433ea87f09b8_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07624,
+   "fscore": 0.3497,
+   "valid": true
+  },
+  {
+   "id": "00000296_52a153d2417747b5926ff9df_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02457,
+   "fscore": 0.8728,
+   "valid": true
+  },
+  {
+   "id": "00000297_52a153d2417747b5926ff9df_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03302,
+   "fscore": 0.8093,
+   "valid": true
+  },
+  {
+   "id": "00000298_52a153d2417747b5926ff9df_step_003",
+   "exec_ok": true,
+   "chamfer": 0.03645,
+   "fscore": 0.6111,
+   "valid": true
+  },
+  {
+   "id": "00000299_52a153d2417747b5926ff9df_step_004",
+   "exec_ok": true,
+   "chamfer": 0.09416,
+   "fscore": 0.6609,
+   "valid": true
+  },
+  {
+   "id": "00000300_52a153d2417747b5926ff9df_step_005",
+   "exec_ok": true,
+   "chamfer": 0.02847,
+   "fscore": 0.793,
+   "valid": true
+  },
+  {
+   "id": "00000303_801fa898afb84fd4a10878da_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06211,
+   "fscore": 0.41,
+   "valid": true
+  },
+  {
+   "id": "00000304_6ab3004ce2e7474faef0ba91_step_000",
+   "exec_ok": true,
+   "chamfer": 0.11761,
+   "fscore": 0.1912,
+   "valid": true
+  },
+  {
+   "id": "00000305_3062bccff48e47a2b9de05e3_step_000",
+   "exec_ok": true,
+   "chamfer": 0.19714,
+   "fscore": 0.1563,
+   "valid": true
+  },
+  {
+   "id": "00000306_3062bccff48e47a2b9de05e3_step_001",
+   "exec_ok": true,
+   "chamfer": 0.0978,
+   "fscore": 0.5672,
+   "valid": true
+  },
+  {
+   "id": "00000307_3062bccff48e47a2b9de05e3_step_002",
+   "exec_ok": true,
+   "chamfer": 0.07033,
+   "fscore": 0.5427,
+   "valid": true
+  },
+  {
+   "id": "00000308_3062bccff48e47a2b9de05e3_step_003",
+   "exec_ok": true,
+   "chamfer": 0.2063,
+   "fscore": 0.1027,
+   "valid": true
+  },
+  {
+   "id": "00000309_3062bccff48e47a2b9de05e3_step_004",
+   "exec_ok": true,
+   "chamfer": 0.10265,
+   "fscore": 0.5616,
+   "valid": true
+  },
+  {
+   "id": "00000310_3062bccff48e47a2b9de05e3_step_005",
+   "exec_ok": true,
+   "chamfer": 0.1511,
+   "fscore": 0.1945,
+   "valid": true
+  },
+  {
+   "id": "00000311_3062bccff48e47a2b9de05e3_step_006",
+   "exec_ok": true,
+   "chamfer": 0.04314,
+   "fscore": 0.576,
+   "valid": true
+  },
+  {
+   "id": "00000312_3062bccff48e47a2b9de05e3_step_007",
+   "exec_ok": true,
+   "chamfer": 0.02177,
+   "fscore": 0.9382,
+   "valid": true
+  },
+  {
+   "id": "00000314_3062bccff48e47a2b9de05e3_step_009",
+   "exec_ok": true,
+   "chamfer": 0.04931,
+   "fscore": 0.5357,
+   "valid": true
+  },
+  {
+   "id": "00000315_3062bccff48e47a2b9de05e3_step_010",
+   "exec_ok": true,
+   "chamfer": 0.02779,
+   "fscore": 0.8127,
+   "valid": true
+  },
+  {
+   "id": "00000316_3062bccff48e47a2b9de05e3_step_011",
+   "exec_ok": true,
+   "chamfer": 0.02221,
+   "fscore": 0.9333,
+   "valid": true
+  },
+  {
+   "id": "00000317_3062bccff48e47a2b9de05e3_step_012",
+   "exec_ok": true,
+   "chamfer": 0.01668,
+   "fscore": 0.9957,
+   "valid": true
+  },
+  {
+   "id": "00000318_3062bccff48e47a2b9de05e3_step_013",
+   "exec_ok": true,
+   "chamfer": 0.01402,
+   "fscore": 0.9989,
+   "valid": true
+  },
+  {
+   "id": "00000319_3062bccff48e47a2b9de05e3_step_014",
+   "exec_ok": true,
+   "chamfer": 0.00835,
+   "fscore": 1.0,
+   "valid": true
+  },
+  {
+   "id": "00000322_3062bccff48e47a2b9de05e3_step_017",
+   "exec_ok": true,
+   "chamfer": 0.02508,
+   "fscore": 0.8661,
+   "valid": true
+  },
+  {
+   "id": "00000323_3062bccff48e47a2b9de05e3_step_018",
+   "exec_ok": true,
+   "chamfer": 0.04802,
+   "fscore": 0.556,
+   "valid": true
+  },
+  {
+   "id": "00000324_3062bccff48e47a2b9de05e3_step_019",
+   "exec_ok": true,
+   "chamfer": 0.03242,
+   "fscore": 0.7496,
+   "valid": true
+  },
+  {
+   "id": "00000325_3062bccff48e47a2b9de05e3_step_020",
+   "exec_ok": true,
+   "chamfer": 0.15593,
+   "fscore": 0.306,
+   "valid": true
+  },
+  {
+   "id": "00000326_965698a62a0444bda975e1fe_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07831,
+   "fscore": 0.3236,
+   "valid": true
+  },
+  {
+   "id": "00000327_92f7834116c74b088e7caa26_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03695,
+   "fscore": 0.6895,
+   "valid": true
+  },
+  {
+   "id": "00000330_12a935cd9b684f879c0505fe_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01739,
+   "fscore": 0.9553,
+   "valid": true
+  },
+  {
+   "id": "00000332_33d82807ab5d44e280c91f01_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0872,
+   "fscore": 0.209,
+   "valid": true
+  },
+  {
+   "id": "00000334_f5a32b1cc9c1466caf094d49_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05987,
+   "fscore": 0.4713,
+   "valid": true
+  },
+  {
+   "id": "00000335_7a1d991d70784092bc3620f1_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02685,
+   "fscore": 0.8333,
+   "valid": true
+  },
+  {
+   "id": "00000336_1a821c3883f7459a9615fca4_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03118,
+   "fscore": 0.8053,
+   "valid": false
+  },
+  {
+   "id": "00000337_153efbd85ca64c4fb6b7ed5f_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06319,
+   "fscore": 0.3595,
+   "valid": true
+  },
+  {
+   "id": "00000338_b2916fd7536b4348b7b22cf7_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06844,
+   "fscore": 0.4122,
+   "valid": true
+  },
+  {
+   "id": "00000342_fe70be720f7e49fa90ded969_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01786,
+   "fscore": 0.9779,
+   "valid": true
+  },
+  {
+   "id": "00000343_ec6d3aa8629841f68389498a_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03817,
+   "fscore": 0.6605,
+   "valid": true
+  },
+  {
+   "id": "00000345_4185972a944744d8a7a0f2b4_step_001",
+   "exec_ok": true,
+   "chamfer": 0.12811,
+   "fscore": 0.1466,
+   "valid": true
+  },
+  {
+   "id": "00000347_4185972a944744d8a7a0f2b4_step_003",
+   "exec_ok": true,
+   "chamfer": 0.05293,
+   "fscore": 0.6297,
+   "valid": true
+  },
+  {
+   "id": "00000350_4185972a944744d8a7a0f2b4_step_006",
+   "exec_ok": true,
+   "chamfer": 0.04993,
+   "fscore": 0.6273,
+   "valid": true
+  },
+  {
+   "id": "00000351_4185972a944744d8a7a0f2b4_step_007",
+   "exec_ok": true,
+   "chamfer": 0.04425,
+   "fscore": 0.5877,
+   "valid": true
+  },
+  {
+   "id": "00000352_4185972a944744d8a7a0f2b4_step_008",
+   "exec_ok": true,
+   "chamfer": 0.03541,
+   "fscore": 0.7697,
+   "valid": true
+  },
+  {
+   "id": "00000353_4185972a944744d8a7a0f2b4_step_009",
+   "exec_ok": true,
+   "chamfer": 0.01556,
+   "fscore": 0.994,
+   "valid": true
+  },
+  {
+   "id": "00000354_68d1a5c2319a4a419ff625c6_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03822,
+   "fscore": 0.5782,
+   "valid": true
+  },
+  {
+   "id": "00000357_68d1a5c2319a4a419ff625c6_step_003",
+   "exec_ok": true,
+   "chamfer": 0.0214,
+   "fscore": 0.909,
+   "valid": true
+  },
+  {
+   "id": "00000359_9ee540a56d79451e8026e1e6_step_001",
+   "exec_ok": true,
+   "chamfer": 0.07921,
+   "fscore": 0.2714,
+   "valid": true
+  },
+  {
+   "id": "00000361_9ee540a56d79451e8026e1e6_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01678,
+   "fscore": 0.9904,
+   "valid": true
+  },
+  {
+   "id": "00000362_9ee540a56d79451e8026e1e6_step_004",
+   "exec_ok": true,
+   "chamfer": 0.01796,
+   "fscore": 0.9859,
+   "valid": true
+  },
+  {
+   "id": "00000363_38d899e2706a4d09960705dd_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05309,
+   "fscore": 0.456,
+   "valid": true
+  },
+  {
+   "id": "00000364_38d899e2706a4d09960705dd_step_001",
+   "exec_ok": true,
+   "chamfer": 0.06786,
+   "fscore": 0.3929,
+   "valid": true
+  },
+  {
+   "id": "00000365_909d518ebf304abc8f91356e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04941,
+   "fscore": 0.6821,
+   "valid": true
+  },
+  {
+   "id": "00000366_909d518ebf304abc8f91356e_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02039,
+   "fscore": 0.9786,
+   "valid": true
+  },
+  {
+   "id": "00000372_23c957e8e7b2428282a13ae2_step_005",
+   "exec_ok": true,
+   "chamfer": 0.03129,
+   "fscore": 0.7253,
+   "valid": true
+  },
+  {
+   "id": "00000373_23c957e8e7b2428282a13ae2_step_006",
+   "exec_ok": true,
+   "chamfer": 0.03706,
+   "fscore": 0.6839,
+   "valid": true
+  },
+  {
+   "id": "00000374_23c957e8e7b2428282a13ae2_step_007",
+   "exec_ok": true,
+   "chamfer": 0.03318,
+   "fscore": 0.7525,
+   "valid": true
+  },
+  {
+   "id": "00000376_23c957e8e7b2428282a13ae2_step_009",
+   "exec_ok": true,
+   "chamfer": 0.04114,
+   "fscore": 0.587,
+   "valid": true
+  },
+  {
+   "id": "00000377_23c957e8e7b2428282a13ae2_step_010",
+   "exec_ok": true,
+   "chamfer": 0.02745,
+   "fscore": 0.8177,
+   "valid": true
+  },
+  {
+   "id": "00000378_23c957e8e7b2428282a13ae2_step_011",
+   "exec_ok": true,
+   "chamfer": 0.02785,
+   "fscore": 0.8206,
+   "valid": true
+  },
+  {
+   "id": "00000379_239bbf0e92974a32bd214366_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01501,
+   "fscore": 0.9486,
+   "valid": true
+  },
+  {
+   "id": "00000380_239bbf0e92974a32bd214366_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02091,
+   "fscore": 0.9216,
+   "valid": true
+  },
+  {
+   "id": "00000381_239bbf0e92974a32bd214366_step_002",
+   "exec_ok": true,
+   "chamfer": 0.01996,
+   "fscore": 0.9446,
+   "valid": true
+  },
+  {
+   "id": "00000382_239bbf0e92974a32bd214366_step_003",
+   "exec_ok": true,
+   "chamfer": 0.05096,
+   "fscore": 0.3817,
+   "valid": true
+  },
+  {
+   "id": "00000383_239bbf0e92974a32bd214366_step_004",
+   "exec_ok": true,
+   "chamfer": 0.03149,
+   "fscore": 0.8285,
+   "valid": true
+  },
+  {
+   "id": "00000386_239bbf0e92974a32bd214366_step_007",
+   "exec_ok": true,
+   "chamfer": 0.0197,
+   "fscore": 0.9666,
+   "valid": true
+  },
+  {
+   "id": "00000391_fd490b564a44413884fab719_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01561,
+   "fscore": 0.9995,
+   "valid": true
+  },
+  {
+   "id": "00000392_fd490b564a44413884fab719_step_001",
+   "exec_ok": true,
+   "chamfer": 0.0315,
+   "fscore": 0.7167,
+   "valid": true
+  },
+  {
+   "id": "00000393_1cf2ece014e94ba798a7c8fa_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03719,
+   "fscore": 0.8103,
+   "valid": true
+  },
+  {
+   "id": "00000395_b19d5d04f2314dc697c57563_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05206,
+   "fscore": 0.6671,
+   "valid": true
+  },
+  {
+   "id": "00000396_2a4de304cbd9449ba073b442_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03128,
+   "fscore": 0.7753,
+   "valid": true
+  },
+  {
+   "id": "00000397_2a4de304cbd9449ba073b442_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02278,
+   "fscore": 0.8587,
+   "valid": true
+  },
+  {
+   "id": "00000398_2a4de304cbd9449ba073b442_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04398,
+   "fscore": 0.6107,
+   "valid": true
+  },
+  {
+   "id": "00000399_2a4de304cbd9449ba073b442_step_003",
+   "exec_ok": true,
+   "chamfer": 0.04233,
+   "fscore": 0.5392,
+   "valid": true
+  },
+  {
+   "id": "00000401_2a4de304cbd9449ba073b442_step_005",
+   "exec_ok": true,
+   "chamfer": 0.02641,
+   "fscore": 0.867,
+   "valid": true
+  },
+  {
+   "id": "00000404_f3759bbb4682423caf207e8e_step_001",
+   "exec_ok": true,
+   "chamfer": 0.0334,
+   "fscore": 0.724,
+   "valid": true
+  },
+  {
+   "id": "00000405_f3759bbb4682423caf207e8e_step_002",
+   "exec_ok": true,
+   "chamfer": 0.02672,
+   "fscore": 0.8296,
+   "valid": true
+  },
+  {
+   "id": "00000406_f3759bbb4682423caf207e8e_step_003",
+   "exec_ok": true,
+   "chamfer": 0.0432,
+   "fscore": 0.5248,
+   "valid": true
+  },
+  {
+   "id": "00000408_36bcb4030e36417b8dc74b87_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02467,
+   "fscore": 0.8804,
+   "valid": true
+  },
+  {
+   "id": "00000409_52e49d94596a4b1c8fbee020_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08509,
+   "fscore": 0.3014,
+   "valid": true
+  },
+  {
+   "id": "00000412_4289a707f87746edaec3e58f_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07343,
+   "fscore": 0.5851,
+   "valid": true
+  },
+  {
+   "id": "00000415_59e562f432f34755a4608c7e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06194,
+   "fscore": 0.3278,
+   "valid": true
+  },
+  {
+   "id": "00000416_d37c25115589465fabd5c36b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07036,
+   "fscore": 0.4877,
+   "valid": true
+  },
+  {
+   "id": "00000417_ee27598981a54e929dfc8430_step_000",
+   "exec_ok": true,
+   "chamfer": 0.11201,
+   "fscore": 0.3481,
+   "valid": true
+  },
+  {
+   "id": "00000425_85dc59ba26254ad5a2b3cb50_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04768,
+   "fscore": 0.5136,
+   "valid": true
+  },
+  {
+   "id": "00000426_85dc59ba26254ad5a2b3cb50_step_001",
+   "exec_ok": true,
+   "chamfer": 0.07138,
+   "fscore": 0.3513,
+   "valid": true
+  },
+  {
+   "id": "00000427_85dc59ba26254ad5a2b3cb50_step_002",
+   "exec_ok": true,
+   "chamfer": 0.05237,
+   "fscore": 0.4741,
+   "valid": true
+  },
+  {
+   "id": "00000428_df0692f3e8b5468c83e3f515_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02162,
+   "fscore": 0.9304,
+   "valid": true
+  },
+  {
+   "id": "00000429_df0692f3e8b5468c83e3f515_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04722,
+   "fscore": 0.7025,
+   "valid": true
+  },
+  {
+   "id": "00000430_df0692f3e8b5468c83e3f515_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04859,
+   "fscore": 0.4318,
+   "valid": true
+  },
+  {
+   "id": "00000435_7ed996a0bd84455bb89c2e63_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04315,
+   "fscore": 0.7052,
+   "valid": true
+  },
+  {
+   "id": "00000438_4d6f259c9e254f2fbb488ee5_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08043,
+   "fscore": 0.3024,
+   "valid": true
+  },
+  {
+   "id": "00000439_4d6f259c9e254f2fbb488ee5_step_001",
+   "exec_ok": true,
+   "chamfer": 0.05598,
+   "fscore": 0.4491,
+   "valid": true
+  },
+  {
+   "id": "00000440_4d6f259c9e254f2fbb488ee5_step_002",
+   "exec_ok": true,
+   "chamfer": 0.05419,
+   "fscore": 0.4544,
+   "valid": true
+  },
+  {
+   "id": "00000443_4ed4c78d6d754aac90876fc2_step_002",
+   "exec_ok": true,
+   "chamfer": 0.02172,
+   "fscore": 0.9265,
+   "valid": true
+  },
+  {
+   "id": "00000448_4d9ba571cd9e47d49d80ea50_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06681,
+   "fscore": 0.363,
+   "valid": true
+  },
+  {
+   "id": "00000451_36c27004140b43549bdd86c7_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05747,
+   "fscore": 0.3883,
+   "valid": true
+  },
+  {
+   "id": "00000457_516b1784884d4facbc4c0d74_step_005",
+   "exec_ok": true,
+   "chamfer": 0.01547,
+   "fscore": 0.9263,
+   "valid": true
+  },
+  {
+   "id": "00000458_516b1784884d4facbc4c0d74_step_006",
+   "exec_ok": true,
+   "chamfer": 0.01658,
+   "fscore": 0.9136,
+   "valid": true
+  },
+  {
+   "id": "00000463_63556d5253af479db16c6a0e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02614,
+   "fscore": 0.8789,
+   "valid": true
+  },
+  {
+   "id": "00000464_2a1b38b7ec834ee3b19457ff_step_000",
+   "exec_ok": true,
+   "chamfer": 0.07959,
+   "fscore": 0.4437,
+   "valid": true
+  },
+  {
+   "id": "00000465_11951e51b89249dba38ded3e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02107,
+   "fscore": 0.8988,
+   "valid": true
+  },
+  {
+   "id": "00000466_11951e51b89249dba38ded3e_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01918,
+   "fscore": 0.9007,
+   "valid": true
+  },
+  {
+   "id": "00000467_11951e51b89249dba38ded3e_step_002",
+   "exec_ok": true,
+   "chamfer": 0.03178,
+   "fscore": 0.7652,
+   "valid": true
+  },
+  {
+   "id": "00000468_11951e51b89249dba38ded3e_step_003",
+   "exec_ok": true,
+   "chamfer": 0.06211,
+   "fscore": 0.5545,
+   "valid": true
+  },
+  {
+   "id": "00000471_add4375497044a97a8ec7b7e_step_000",
+   "exec_ok": true,
+   "chamfer": 0.06349,
+   "fscore": 0.425,
+   "valid": true
+  },
+  {
+   "id": "00000472_75ae9f0c59d345f499b928d7_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03769,
+   "fscore": 0.7456,
+   "valid": true
+  },
+  {
+   "id": "00000473_db2f9eab292d47fa8304bcf9_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08659,
+   "fscore": 0.3146,
+   "valid": true
+  },
+  {
+   "id": "00000474_a5639f2b84c445aea5da18ad_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03901,
+   "fscore": 0.6961,
+   "valid": true
+  },
+  {
+   "id": "00000475_0fc8cc17c6af48dabe36c8f2_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01806,
+   "fscore": 0.9664,
+   "valid": true
+  },
+  {
+   "id": "00000476_0fc8cc17c6af48dabe36c8f2_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02703,
+   "fscore": 0.7688,
+   "valid": true
+  },
+  {
+   "id": "00000478_0fc8cc17c6af48dabe36c8f2_step_003",
+   "exec_ok": true,
+   "chamfer": 0.02635,
+   "fscore": 0.77,
+   "valid": true
+  },
+  {
+   "id": "00000480_8b77ffd8df7a4ba49fc45436_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02425,
+   "fscore": 0.8921,
+   "valid": true
+  },
+  {
+   "id": "00000483_a7d0c851b5f24a97a7cac950_step_000",
+   "exec_ok": true,
+   "chamfer": 0.00816,
+   "fscore": 0.9974,
+   "valid": true
+  },
+  {
+   "id": "00000484_a7d0c851b5f24a97a7cac950_step_001",
+   "exec_ok": true,
+   "chamfer": 0.03788,
+   "fscore": 0.7157,
+   "valid": true
+  },
+  {
+   "id": "00000486_a7d0c851b5f24a97a7cac950_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01834,
+   "fscore": 0.9404,
+   "valid": true
+  },
+  {
+   "id": "00000487_a7d0c851b5f24a97a7cac950_step_004",
+   "exec_ok": true,
+   "chamfer": 0.0209,
+   "fscore": 0.9888,
+   "valid": true
+  },
+  {
+   "id": "00000488_a7d0c851b5f24a97a7cac950_step_005",
+   "exec_ok": true,
+   "chamfer": 0.14721,
+   "fscore": 0.269,
+   "valid": true
+  },
+  {
+   "id": "00000489_a7d0c851b5f24a97a7cac950_step_006",
+   "exec_ok": true,
+   "chamfer": 0.05096,
+   "fscore": 0.6727,
+   "valid": true
+  },
+  {
+   "id": "00000493_a7d0c851b5f24a97a7cac950_step_010",
+   "exec_ok": true,
+   "chamfer": 0.04033,
+   "fscore": 0.6111,
+   "valid": true
+  },
+  {
+   "id": "00000494_a7d0c851b5f24a97a7cac950_step_011",
+   "exec_ok": true,
+   "chamfer": 0.17523,
+   "fscore": 0.2562,
+   "valid": true
+  },
+  {
+   "id": "00000495_257301d742624e649d1c3724_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03099,
+   "fscore": 0.7484,
+   "valid": true
+  },
+  {
+   "id": "00000496_7cc62286d3e04526a9610960_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0943,
+   "fscore": 0.2878,
+   "valid": true
+  },
+  {
+   "id": "00000497_7cc62286d3e04526a9610960_step_001",
+   "exec_ok": true,
+   "chamfer": 0.05927,
+   "fscore": 0.3493,
+   "valid": true
+  },
+  {
+   "id": "00000498_7cc62286d3e04526a9610960_step_002",
+   "exec_ok": true,
+   "chamfer": 0.04215,
+   "fscore": 0.5664,
+   "valid": true
+  },
+  {
+   "id": "00000499_5499914343bd4f549b38046d_step_000",
+   "exec_ok": true,
+   "chamfer": 0.03128,
+   "fscore": 0.8295,
+   "valid": true
+  },
+  {
+   "id": "00000503_654cafbd215145f78dc2d5f9_step_000",
+   "exec_ok": true,
+   "chamfer": 0.08178,
+   "fscore": 0.4967,
+   "valid": false
+  },
+  {
+   "id": "00000504_654cafbd215145f78dc2d5f9_step_001",
+   "exec_ok": true,
+   "chamfer": 0.03151,
+   "fscore": 0.7868,
+   "valid": true
+  },
+  {
+   "id": "00000505_654cafbd215145f78dc2d5f9_step_002",
+   "exec_ok": true,
+   "chamfer": 0.06303,
+   "fscore": 0.5407,
+   "valid": true
+  },
+  {
+   "id": "00000506_654cafbd215145f78dc2d5f9_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01357,
+   "fscore": 0.9995,
+   "valid": true
+  },
+  {
+   "id": "00000507_654cafbd215145f78dc2d5f9_step_004",
+   "exec_ok": true,
+   "chamfer": 0.01073,
+   "fscore": 1.0,
+   "valid": true
+  },
+  {
+   "id": "00000515_3c4e14158ece451f8d1c7318_step_001",
+   "exec_ok": true,
+   "chamfer": 0.02688,
+   "fscore": 0.8659,
+   "valid": true
+  },
+  {
+   "id": "00000516_3c4e14158ece451f8d1c7318_step_002",
+   "exec_ok": true,
+   "chamfer": 0.0228,
+   "fscore": 0.8565,
+   "valid": true
+  },
+  {
+   "id": "00000517_3c4e14158ece451f8d1c7318_step_003",
+   "exec_ok": true,
+   "chamfer": 0.01359,
+   "fscore": 0.9993,
+   "valid": true
+  },
+  {
+   "id": "00000518_3c4e14158ece451f8d1c7318_step_004",
+   "exec_ok": true,
+   "chamfer": 0.01053,
+   "fscore": 1.0,
+   "valid": true
+  },
+  {
+   "id": "00000522_a56dd4152b7e4ccf91212d7b_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02636,
+   "fscore": 0.853,
+   "valid": true
+  },
+  {
+   "id": "00000523_1f8d7f343e634c11a80d23ac_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05873,
+   "fscore": 0.5697,
+   "valid": true
+  },
+  {
+   "id": "00000524_47a4d745edd94562829ebae0_step_000",
+   "exec_ok": true,
+   "chamfer": 0.05508,
+   "fscore": 0.6228,
+   "valid": true
+  },
+  {
+   "id": "00000526_f9d6559308dc4c85aab9fa38_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0307,
+   "fscore": 0.7491,
+   "valid": true
+  },
+  {
+   "id": "00000528_bc0d6937206b43bc96521413_step_000",
+   "exec_ok": true,
+   "chamfer": 0.04708,
+   "fscore": 0.7204,
+   "valid": true
+  },
+  {
+   "id": "00000529_bc0d6937206b43bc96521413_step_001",
+   "exec_ok": true,
+   "chamfer": 0.01448,
+   "fscore": 0.9374,
+   "valid": true
+  },
+  {
+   "id": "00000532_bc0d6937206b43bc96521413_step_004",
+   "exec_ok": true,
+   "chamfer": 0.03778,
+   "fscore": 0.6576,
+   "valid": true
+  },
+  {
+   "id": "00000536_78f8086a54fa4bfdb7fb6b41_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02998,
+   "fscore": 0.805,
+   "valid": true
+  },
+  {
+   "id": "00000537_6a992988edfc4995b2ae3a9c_step_000",
+   "exec_ok": true,
+   "chamfer": 0.01696,
+   "fscore": 0.951,
+   "valid": true
+  },
+  {
+   "id": "00000539_a592180c4e4a4e82b9f352a1_step_000",
+   "exec_ok": true,
+   "chamfer": 0.02455,
+   "fscore": 0.8757,
+   "valid": true
+  },
+  {
+   "id": "00000540_a592180c4e4a4e82b9f352a1_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04037,
+   "fscore": 0.5965,
+   "valid": true
+  },
+  {
+   "id": "00000542_4b1756f6e72b45c29a8e4eb4_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0152,
+   "fscore": 0.9812,
+   "valid": true
+  },
+  {
+   "id": "00000548_c402dc5b614a41b1a9d9197a_step_000",
+   "exec_ok": true,
+   "chamfer": 0.0587,
+   "fscore": 0.4413,
+   "valid": true
+  },
+  {
+   "id": "00000550_41a24c0b74a34217832f5af0_step_001",
+   "exec_ok": true,
+   "chamfer": 0.04368,
+   "fscore": 0.5899,
+   "valid": true
+  },
+  {
+   "id": "00000552_41a24c0b74a34217832f5af0_step_003",
+   "exec_ok": true,
+   "chamfer": 0.05463,
+   "fscore": 0.5919,
+   "valid": true
+  },
+  {
+   "id": "00000553_41a24c0b74a34217832f5af0_step_004",
+   "exec_ok": true,
+   "chamfer": 0.03882,
+   "fscore": 0.6556,
+   "valid": true
+  }
+ ]
+}
