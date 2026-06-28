@@ -1,0 +1,160 @@
+{
+ "total": 300,
+ "exec_ok": 262,
+ "exec_fail": 38,
+ "exec_success_rate": 0.8733,
+ "fails": [
+  {
+   "id": "00000009_9b3d6a97e8de4aa193b81000_step_001",
+   "why": ".py\", line 133, in popPendingWires\n    raise ValueError(\"No pending wires present\")\nValueError: No pending wires present"
+  },
+  {
+   "id": "00000018_e8e79d1385fd4c78be414f6c_step_001",
+   "why": "ilderAPI_MakeEdge(Vector(v1).toPnt(), Vector(v2).toPnt()).Edge()\nOCP.StdFail.StdFail_NotDone: BRep_API: command not done"
+  },
+  {
+   "id": "00000019_e8e79d1385fd4c78be414f6c_step_002",
+   "why": "ilderAPI_MakeEdge(Vector(v1).toPnt(), Vector(v2).toPnt()).Edge()\nOCP.StdFail.StdFail_NotDone: BRep_API: command not done"
+  },
+  {
+   "id": "00000027_ad34a3f60c4a4caa99646600_step_007",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000045_c7d977f326364e35bb5b5d27_step_008",
+   "why": ".py\", line 133, in popPendingWires\n    raise ValueError(\"No pending wires present\")\nValueError: No pending wires present"
+  },
+  {
+   "id": "00000047_1a67c6032bbd479492910b39_step_001",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000054_666139e3bff64d4e8a6ce183_step_003",
+   "why": " prism_builder: Any = BRepPrimAPI_MakePrism(\nOCP.Standard.Standard_ConstructionError: BRepSweep_Translation::Constructor"
+  },
+  {
+   "id": "00000096_fcd027a9411a4ae7ac146826_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000110_ce24e0cbec8e45c89735d148_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000121_43c44d81ee2f44428314b518_step_000",
+   "why": "ilderAPI_MakeEdge(Vector(v1).toPnt(), Vector(v2).toPnt()).Edge()\nOCP.StdFail.StdFail_NotDone: BRep_API: command not done"
+  },
+  {
+   "id": "00000122_43c44d81ee2f44428314b518_step_001",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000128_e18c7feacfb54f3880659b43_step_003",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000149_d9a2aa6d24764b809c265460_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000182_b21aa794b6b64d87a57c245e_step_012",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000184_6c4172e8a17140f89d3b1c0a_step_001",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000191_222c0df7c7474deb967b5baa_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000193_222c0df7c7474deb967b5baa_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000200_826494e894454504b0971fd1_step_003",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000204_89aafdfc86b04301be0478c6_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000206_27417003e762409185cb2b69_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000210_33bd159d563f438fbbebd9fa_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000222_97b354a907114b7183faa9c4_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000228_000ace8ff6634150be81fe86_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000256_845fb06d7f2f4802a806a600_step_001",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000347_4185972a944744d8a7a0f2b4_step_003",
+   "why": "_geomAdaptor\n    return BRepAdaptor_Curve(self.wrapped)\nOCP.Standard.Standard_NullObject: BRepAdaptor_Curve::No geometry"
+  },
+  {
+   "id": "00000361_9ee540a56d79451e8026e1e6_step_003",
+   "why": "ilderAPI_MakeEdge(Vector(v1).toPnt(), Vector(v2).toPnt()).Edge()\nOCP.StdFail.StdFail_NotDone: BRep_API: command not done"
+  },
+  {
+   "id": "00000391_fd490b564a44413884fab719_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000396_2a4de304cbd9449ba073b442_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000427_85dc59ba26254ad5a2b3cb50_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000451_36c27004140b43549bdd86c7_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000473_db2f9eab292d47fa8304bcf9_step_000",
+   "why": "\nValueError: Supported names are ['XY', 'YZ', 'ZX', 'XZ', 'YX', 'ZY', 'front', 'back', 'left', 'right', 'top', 'bottom']"
+  },
+  {
+   "id": "00000474_a5639f2b84c445aea5da18ad_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000476_0fc8cc17c6af48dabe36c8f2_step_001",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000488_a7d0c851b5f24a97a7cac950_step_005",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000498_7cc62286d3e04526a9610960_step_002",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000503_654cafbd215145f78dc2d5f9_step_000",
+   "why": "shapes.py\", line 354, in shapetype\n    raise ValueError(\"Null TopoDS_Shape object\")\nValueError: Null TopoDS_Shape object"
+  },
+  {
+   "id": "00000523_1f8d7f343e634c11a80d23ac_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  },
+  {
+   "id": "00000537_6a992988edfc4995b2ae3a9c_step_000",
+   "why": ".py\", line 2328, in makeThreePointArc\n    ).Value()\nOCP.StdFail.StdFail_NotDone: GC_MakeArcOfCircle::Value() - no result"
+  }
+ ]
+}

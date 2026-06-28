@@ -157,18 +157,19 @@ proposal_draft.md    GeometryBench 五级体系设计文档
 
 ---
 
-## 8. 进阶：SOTA 方法重建评测（cadrille）
+## 8. 进阶：SOTA 方法重建评测（cadrille vs CAD-Recode）
 
-在**同一 ABC 数据底座**上评测了 SOTA 的点云→B-Rep 方法 **cadrille**（ICLR 2026，点云→CadQuery 代码→B-Rep）。300 个 ABC 模型，单张 RTX 4090：
+在**同一 ABC 数据底座**上评测了两个 SOTA 点云→B-Rep 方法（点云→CadQuery 代码→B-Rep）。300 个 ABC 模型，单张 RTX 4090：
 
-| 指标 | cadrille-rl |
-|---|---|
-| 代码可执行率 | **100%** (300/300) |
-| B-Rep 合法率 | **99%** |
-| F-score@0.02 | **0.67** |
-| Median Chamfer | 0.037 |
+| 指标 | **cadrille-rl** | **CAD-Recode-v1.5** |
+|---|---|---|
+| 代码可执行率 | **100%** | 87.3% |
+| B-Rep 合法率 | **99%** | 89.6% |
+| F-score@0.02 | **0.673** | 0.620 |
+| median Chamfer | **0.037** | 0.043 |
+| F (simple / complex) | 0.77 / **0.65** | 0.76 / 0.58 |
 
 ![GT vs cadrille 重建](cadrille_eval/results/fig_recon_gallery.png)
 <sub>上排 GT，下排 cadrille 重建；左 3 = Chamfer 最小，右 3 = 最大。</sub>
 
-**发现**：cadrille 极可靠地产出**合法 CAD**（100% 可执行、99% 合法），但几何保真度中等——简单形状（圆柱/方块/空心筒）几近完美，**复杂多分支零件（管接头、弯头、T 形件）只能简化近似**。根因是分布偏移（cadrille 训练于较简单的 DeepCAD，而 ABC 更杂）。这正是 GeometryBench 的价值：**暴露 SOTA 方法在多样真实几何上的能力边界**。完整说明与复现见 [`cadrille_eval/RESULTS.md`](cadrille_eval/RESULTS.md)。
+**发现**：① cadrille 更可靠（100%/99% vs 87%/90%）——高层 primitive 代码比 sketch-segment 更稳；② cadrille 精度也略高，差距主要在 complex；③ **cadrille（更新的 RL 升级版）全面优于其前身 CAD-Recode——benchmark 正确地排出了高下**，本身就验证了评测有效性；④ 两方法都在 complex 上退化，按难度分层抓到了真实能力梯度。完整说明与复现见 [`cadrille_eval/RESULTS.md`](cadrille_eval/RESULTS.md)。

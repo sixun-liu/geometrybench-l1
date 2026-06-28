@@ -1,0 +1,26 @@
+{
+ "all": {
+  "n": 300,
+  "median_cd_raw": 0.0373,
+  "median_cd_icp": 0.0361,
+  "f@0.02_raw": 0.6732,
+  "f@0.02_icp": 0.6915,
+  "valid_rate": 0.99
+ },
+ "simple": {
+  "n": 57,
+  "median_cd_raw": 0.0242,
+  "median_cd_icp": 0.0243,
+  "f@0.02_raw": 0.7653,
+  "f@0.02_icp": 0.7731,
+  "valid_rate": 0.9825
+ },
+ "complex": {
+  "n": 243,
+  "median_cd_raw": 0.0412,
+  "median_cd_icp": 0.0398,
+  "f@0.02_raw": 0.6516,
+  "f@0.02_icp": 0.6723,
+  "valid_rate": 0.9918
+ }
+}
