@@ -1,0 +1,35 @@
+{
+ "n_tasks": 118913,
+ "n_points_each": 128,
+ "classes": [
+  "plane",
+  "cylinder",
+  "cone",
+  "sphere",
+  "torus",
+  "freeform_surf",
+  "line",
+  "circle",
+  "ellipse",
+  "bspline_curve"
+ ],
+ "class_distribution": {
+  "plane": 12000,
+  "cylinder": 12000,
+  "cone": 12000,
+  "sphere": 10913,
+  "torus": 12000,
+  "freeform_surf": 12000,
+  "line": 12000,
+  "circle": 12000,
+  "ellipse": 12000,
+  "bspline_curve": 12000
+ },
+ "cap": 12000,
+ "n_models": 5902,
+ "points_shape": [
+  118913,
+  128,
+  3
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "plane": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.84,
+  "auc": 0.91
+ },
+ "cylinder": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.79,
+  "auc": 0.874
+ },
+ "freeform_surf": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.766,
+  "auc": 0.852
+ },
+ "line": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.921,
+  "auc": 0.975
+ },
+ "circle": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.921,
+  "auc": 0.973
+ },
+ "bspline_curve": {
+  "n_each": 2500,
+  "real_vs_synth_acc": 0.927,
+  "auc": 0.978
+ }
+}

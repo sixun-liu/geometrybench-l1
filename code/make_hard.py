@@ -39,7 +39,8 @@ def main():
         out[i] = q / s if s > 1e-9 else q
     np.save(os.path.join(dst, "points.npy"), out.astype("float32"))
 
-    for f in ("labels.npy", "split.npy", "tasks.jsonl"):
+    for f in ("labels.npy", "split.npy", "groups.npy", "tasks.jsonl",
+              "_DATASET_SUMMARY.json"):
         if os.path.exists(os.path.join(src, f)):
             shutil.copy(os.path.join(src, f), os.path.join(dst, f))
 
