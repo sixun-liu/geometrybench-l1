@@ -2,8 +2,10 @@
 
 按沈老师要求"系统评测 SOTA Point Cloud to BRep 方法"，在 **GeometryBench 的 ABC 测试集**上评测了两个 SOTA 方法（点云→CadQuery 代码→B-Rep）：
 
-- **cadrille**（ICLR 2026，多模态，RL/SOTA 权重 `maksimko123/cadrille-rl`）
-- **CAD-Recode**（ICCV 2025，cadrille 的前身，`filapro/cad-recode-v1.5`）
+- **cadrille**（ICLR 2026，arXiv:2505.22914，多模态，RL/SOTA 权重 `maksimko123/cadrille-rl`）
+- **CAD-Recode**（ICCV 2025，arXiv:2412.14042，cadrille 的前身，`filapro/cad-recode-v1.5`）
+
+> 文献：[1] Kolodiazhnyi et al. *cadrille: Multi-modal CAD Reconstruction with Online RL.* ICLR 2026. arXiv:2505.22914.　[2] Rukhovich et al. *CAD-Recode: Reverse Engineering CAD Code from Point Clouds.* ICCV 2025. arXiv:2412.14042.
 
 ## 协议
 - **测试集**：300 个 ABC 模型（STEP → 归一化单位立方体 STL；方法各自采 8192 点 → FPS 256 点输入）。与 GeometryBench 同源（ABC），刻意不用方法自带的 DeepCAD split——测"SOTA 在我们 benchmark 上的真实表现"。

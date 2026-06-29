@@ -176,3 +176,5 @@ proposal_draft.md    GeometryBench 五级体系设计文档
 <sub>上排 GT，下排 cadrille 重建；左 3 = Chamfer 最小，右 3 = 最大。</sub>
 
 **发现**：① cadrille 更可靠（100%/99% vs 87%/90%）——高层 primitive 代码比 sketch-segment 更稳；② cadrille 精度也略高，差距主要在 complex；③ **cadrille（更新的 RL 升级版）全面优于其前身 CAD-Recode——benchmark 正确地排出了高下**，本身就验证了评测有效性；④ 两方法都在 complex 上退化，按难度分层抓到了真实能力梯度。完整说明与复现见 [`cadrille_eval/RESULTS.md`](cadrille_eval/RESULTS.md)。
+
+> 文献：cadrille（ICLR 2026，[arXiv:2505.22914](https://arxiv.org/abs/2505.22914)）· CAD-Recode（ICCV 2025，[arXiv:2412.14042](https://arxiv.org/abs/2412.14042)）。
